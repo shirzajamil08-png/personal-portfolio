@@ -14,6 +14,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  /* stop the page scrolling behind the open mobile menu */
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   /* scroll spy: highlight the section in the middle of the viewport */
   useEffect(() => {
     const sections = navLinks
