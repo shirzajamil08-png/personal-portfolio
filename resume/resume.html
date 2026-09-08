@@ -14,6 +14,9 @@
     4. Take a screenshot of the page and save it as
        client/public/assets/resume-preview.jpg (optional, it is the
        image shown in the Resume section of the site).
+
+  Keep it to ONE page: the content currently ends about 110px above the
+  page break, so there is room for two or three more lines, no more.
 -->
 <style>
   @page { size: A4; margin: 0; }
@@ -23,10 +26,10 @@
   body {
     width: 210mm;
     min-height: 297mm;
-    padding: 16mm 15mm;
+    padding: 13mm 14mm;
     font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-    font-size: 10.2pt;
-    line-height: 1.45;
+    font-size: 9.9pt;
+    line-height: 1.36;
     color: #1e2233;
     background: #fff;
     -webkit-print-color-adjust: exact;
@@ -36,11 +39,11 @@
   /* ---------- header ---------- */
   .head {
     border-bottom: 2.5pt solid #7c5cff;
-    padding-bottom: 9pt;
-    margin-bottom: 13pt;
+    padding-bottom: 7pt;
+    margin-bottom: 10pt;
   }
   .name {
-    font-size: 25pt;
+    font-size: 23pt;
     font-weight: 700;
     letter-spacing: -0.4pt;
     color: #14162a;
@@ -67,7 +70,7 @@
     text-transform: uppercase;
     color: #14162a;
     padding-bottom: 3pt;
-    margin: 13pt 0 7pt;
+    margin: 10pt 0 5pt;
     border-bottom: 0.8pt solid #dfe2ee;
   }
   h2:first-of-type { margin-top: 4pt; }
@@ -80,7 +83,7 @@
     align-items: baseline;
     gap: 10pt;
   }
-  .row + .detail { margin-bottom: 7pt; }
+  .row + .detail { margin-bottom: 5pt; }
 
   .title { font-weight: 700; color: #14162a; font-size: 10.6pt; }
   .when {
@@ -92,27 +95,19 @@
   .org { color: #6d4fe6; font-size: 9.4pt; font-weight: 600; }
   .detail { color: #454a63; font-size: 9.6pt; }
 
-  .entry { margin-bottom: 8pt; }
+  .entry { margin-bottom: 5.5pt; }
   .entry:last-child { margin-bottom: 0; }
 
   /* ---------- skills ---------- */
-  .skills { display: grid; grid-template-columns: 62pt 1fr; row-gap: 4.5pt; column-gap: 8pt; }
+  .skills { display: grid; grid-template-columns: 62pt 1fr; row-gap: 3.5pt; column-gap: 8pt; }
   .skills dt { font-weight: 700; color: #14162a; font-size: 9.4pt; }
   .skills dd { color: #454a63; font-size: 9.6pt; }
 
   /* ---------- projects ---------- */
-  .proj { margin-bottom: 7.5pt; }
+  .proj { margin-bottom: 5pt; }
   .proj:last-child { margin-bottom: 0; }
   .link { color: #6d4fe6; font-size: 8.8pt; }
 
-  .foot {
-    margin-top: 14pt;
-    padding-top: 7pt;
-    border-top: 0.8pt solid #dfe2ee;
-    font-size: 8.6pt;
-    color: #8a8fa6;
-    text-align: center;
-  }
 </style>
 </head>
 <body>
@@ -130,10 +125,10 @@
 
   <h2>Profile</h2>
   <p class="summary">
-    MERN stack developer building responsive web applications with MongoDB, Express.js,
-    React and Node.js. Comfortable owning both the REST API and the user interface, with a
-    focus on clean, mobile-friendly layouts built in React and Bootstrap. Five applications
-    designed, built and deployed. Currently studying MS Artificial Intelligence.
+    MERN stack developer building responsive web applications with MongoDB, Express.js, React
+    and Node.js. Comfortable owning both the REST API and the user interface, with a focus on
+    clean, mobile-friendly layouts in React and Bootstrap. Five applications built and deployed.
+    Currently studying MS Artificial Intelligence.
   </p>
 
   <h2>Skills</h2>
@@ -196,8 +191,7 @@
     </div>
     <div class="org">Personal work</div>
     <div class="detail">
-      Designed, built and deployed five React and MERN applications, each with its own
-      GitHub repository and live deployment on Vercel.
+      Designed, built and deployed five React and MERN applications, each live on Vercel.
     </div>
   </div>
 
@@ -209,8 +203,7 @@
       <span class="when">MERN</span>
     </div>
     <div class="detail">
-      Restaurants, menus, wishlist, cart and checkout behind a login. React front end
-      talking to an Express and MongoDB API.
+      Restaurants, menus, wishlist, cart and checkout behind a login, on an Express and MongoDB API.
       <span class="link">food-eliverysystem.vercel.app</span>
     </div>
   </div>
@@ -221,8 +214,7 @@
       <span class="when">React</span>
     </div>
     <div class="detail">
-      Browse, search and filter events by category and book a seat. Client-side routing
-      with a light/dark theme toggle.
+      Browse, search and filter events by category and book a seat, with routing and a theme toggle.
       <span class="link">event-booking-website-liard.vercel.app</span>
     </div>
   </div>
@@ -255,13 +247,11 @@
       <span class="when">MERN</span>
     </div>
     <div class="detail">
-      React front end with an Express REST API and MongoDB Atlas storing the project list
-      and every contact-form message.
+      React front end, Express REST API and MongoDB Atlas storing projects and contact messages.
       <span class="link">personal-portfolio-theta-beige-99.vercel.app</span>
     </div>
   </div>
 
-  <div class="foot">References available on request</div>
 
 </body>
 </html>
