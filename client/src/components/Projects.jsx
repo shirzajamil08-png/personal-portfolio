@@ -6,9 +6,9 @@ import { fallbackProjects } from "../data/portfolio";
 
 const FILTERS = [
   { key: "all", label: "All" },
-  { key: "mern", label: "MERN" },
-  { key: "react", label: "React" },
-  { key: "api", label: "API" }
+  { key: "fullstack", label: "Full-Stack" },
+  { key: "frontend", label: "Frontend" },
+  { key: "react", label: "React" }
 ];
 
 /* the decorative shape behind each card, keyed by project.thumb */
@@ -92,12 +92,26 @@ export default function Projects() {
           {visible.map((p, i) => (
             <Reveal key={p._id || p.title} delay={Math.min(i, 5) * 0.08}>
               <TiltCard className="project" max={10} as="article">
-                <div className={`project__thumb project__thumb--${p.thumb || 1}`}>
+                <div className={`project__thumb project__thumb--${p.thumb || 1} ${p.image ? "has-shot" : ""}`}>
                   {p.featured && <span className="project__badge">Featured</span>}
-                  <svg viewBox="0 0 400 240" aria-hidden="true">
-                    {THUMB_ART[p.thumb] || THUMB_ART[1]}
-                  </svg>
-                  <span className="project__emoji" aria-hidden="true">{p.emoji}</span>
+
+                  {p.image ? (
+                    /* real screenshot of the live site */
+                    <img
+                      src={p.image}
+                      alt={`Screenshot of ${p.title}`}
+                      loading="lazy"
+                      width="1280"
+                      height="800"
+                    />
+                  ) : (
+                    <>
+                      <svg viewBox="0 0 400 240" aria-hidden="true">
+                        {THUMB_ART[p.thumb] || THUMB_ART[1]}
+                      </svg>
+                      <span className="project__emoji" aria-hidden="true">{p.emoji}</span>
+                    </>
+                  )}
                 </div>
 
                 <div className="project__body">

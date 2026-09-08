@@ -80,80 +80,70 @@ export const cubeFaces = {
   bottom: "CSS"
 };
 
-/* Fallback copy of the projects that seed.js loads into MongoDB. */
+/* Fallback copy of the projects that seed.js loads into MongoDB.
+   Keep this in sync with server/seed.js. */
 export const fallbackProjects = [
   {
     _id: "local-1",
-    title: "ShopSphere — E-Commerce Platform",
+    title: "FoodExpress — Food Delivery System",
     description:
-      "A full MERN store with product search, cart, checkout flow, order history and an admin dashboard for inventory.",
-    tech: ["React", "Node.js", "Express", "MongoDB", "JWT"],
-    tags: ["mern", "react", "api"],
-    emoji: "\u{1F6D2}",
+      "Full MERN application for ordering food online: browse restaurants and menus, add items to a wishlist or cart, and place an order behind a login. React front end talking to an Express and MongoDB API.",
+    tech: ["React", "Express", "MongoDB", "Mongoose", "Axios", "Bootstrap"],
+    tags: ["fullstack", "mern", "react"],
+    image: "/assets/projects/food-delivery.jpg",
     thumb: 1,
-    github: "https://github.com/shirza/shopsphere",
-    demo: "",
+    github: "https://github.com/shirzajamil08-png/food-_elivery_system",
+    demo: "https://food-eliverysystem.vercel.app/",
     featured: true
   },
   {
     _id: "local-2",
-    title: "TaskFlow — Team Task Manager",
+    title: "EventBook — Event Booking Platform",
     description:
-      "Kanban-style project tracker with drag-and-drop boards, role-based access, JWT authentication and activity logging.",
-    tech: ["React", "Express", "MongoDB", "JWT"],
-    tags: ["mern", "react", "api"],
-    emoji: "\u{1F5C3}",
+      "Discover concerts, seminars and workshops, filter them by category, search by name and book a seat. Multi-page React app with client-side routing and a light/dark theme toggle.",
+    tech: ["React", "React Router", "React Bootstrap", "Vite"],
+    tags: ["frontend", "react"],
+    image: "/assets/projects/event-booking.jpg",
     thumb: 2,
-    github: "https://github.com/shirza/taskflow",
-    demo: ""
+    github: "https://github.com/shirzajamil08-png/event-booking-website",
+    demo: "https://event-booking-website-liard.vercel.app/"
   },
   {
     _id: "local-3",
-    title: "ChatterBox — Realtime Chat App",
+    title: "Car Rental Website",
     description:
-      "Socket.io powered messaging with private rooms, typing indicators, online presence and persisted message history.",
-    tech: ["Socket.io", "Node.js", "React", "MongoDB"],
-    tags: ["mern", "api"],
-    emoji: "\u{1F4AC}",
+      "Rental booking front end where visitors browse the fleet, choose a pickup location with pickup and return dates, and search available cars. Responsive layout with scroll-triggered animations.",
+    tech: ["React", "Bootstrap", "AOS", "Vite"],
+    tags: ["frontend", "react"],
+    image: "/assets/projects/car-rental.jpg",
     thumb: 3,
-    github: "https://github.com/shirza/chatterbox",
-    demo: ""
+    github: "https://github.com/shirzajamil08-png/car-rental-website",
+    demo: "https://car-rental-website-snowy.vercel.app/"
   },
   {
     _id: "local-4",
-    title: "DevBlog CMS",
+    title: "Toast & Brew — Coffee House",
     description:
-      "Markdown-based blogging platform with a rich editor, image uploads, tags, comments and an SEO-friendly public site.",
-    tech: ["Express", "MongoDB", "React", "Multer"],
-    tags: ["mern", "api"],
-    emoji: "\u{270D}",
+      "Warm, image-led site for a coffee shop with an about section, full menu, photo gallery and a table reservation call to action, animated as you scroll.",
+    tech: ["React", "Bootstrap", "AOS", "Vite"],
+    tags: ["frontend", "react"],
+    image: "/assets/projects/coffee.jpg",
     thumb: 4,
-    github: "https://github.com/shirza/devblog",
-    demo: ""
+    github: "https://github.com/shirzajamil08-png/coffee-website",
+    demo: "https://coffee-website-navy-five.vercel.app/"
   },
   {
     _id: "local-5",
-    title: "WeatherScope Dashboard",
-    description:
-      "Responsive React dashboard consuming a live weather API — geolocation search, 7-day forecast charts and saved cities.",
-    tech: ["React", "REST API", "Chart.js", "Bootstrap"],
-    tags: ["react", "api"],
-    emoji: "\u{1F305}",
-    thumb: 5,
-    github: "https://github.com/shirza/weatherscope",
-    demo: ""
-  },
-  {
-    _id: "local-6",
     title: "This MERN Portfolio",
     description:
-      "The site you are on: React front end with a Three.js scene, an Express API and MongoDB storing projects and contact messages.",
-    tech: ["React", "Three.js", "Express", "MongoDB"],
-    tags: ["mern", "react"],
+      "The site you are on. React front end with a Three.js particle scene and CSS 3D cards, an Express REST API, and MongoDB Atlas storing these projects and every contact message.",
+    tech: ["React", "Three.js", "Express", "MongoDB", "Framer Motion"],
+    tags: ["fullstack", "mern", "react"],
+    image: "",
     emoji: "\u{1F3A8}",
     thumb: 6,
-    github: "https://github.com/shirza/personal-portfolio",
-    demo: ""
+    github: "https://github.com/shirzajamil08-png/personal-portfolio",
+    demo: "https://personal-portfolio-theta-beige-99.vercel.app/"
   }
 ];
 
