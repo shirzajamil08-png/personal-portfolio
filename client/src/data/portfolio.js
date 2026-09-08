@@ -25,21 +25,21 @@ export const roles = [
 ];
 
 export const stats = [
-  { value: 15, label: "Projects built" },
+  { value: 5, label: "Projects deployed" },
   { value: 12, label: "Technologies" },
-  { value: 2, label: "Years coding" }
+  { value: 4, label: "Years coding" }
 ];
 
 export const aboutCards = [
   {
     icon: "\u{1F3AF}",
     title: "Career Goal",
-    text: "Grow into a full-stack engineer shipping production apps at scale, and contribute to open source along the way."
+    text: "Grow into a full-stack engineer shipping production apps, and bring my AI studies into the products I build."
   },
   {
     icon: "\u{1F393}",
     title: "Education",
-    text: "Bachelor degree in Computer Science, backed by self-driven MERN and UI/UX training."
+    text: "BS Computer Science from GC University Faisalabad, now studying MS Artificial Intelligence at FAST Islamabad."
   },
   {
     icon: "\u{1F4A1}",
@@ -149,43 +149,31 @@ export const fallbackProjects = [
 
 export const education = [
   {
-    date: "2023 — Present",
+    date: "2026 — Present",
+    title: "MS Artificial Intelligence",
+    org: "FAST NUCES · Islamabad Campus",
+    text: "Currently pursuing a master's in AI, building on a full-stack development background."
+  },
+  {
+    date: "2022 — 2026",
     title: "BS Computer Science",
-    org: "University · Pakistan",
-    text: "Core coursework in data structures, databases, OOP, operating systems and web engineering."
-  },
-  {
-    date: "2021 — 2023",
-    title: "Intermediate — Pre-Engineering",
-    org: "College",
-    text: "Graduated with distinction; started self-teaching HTML, CSS and JavaScript in the same period."
-  },
-  {
-    date: "2024",
-    title: "Certifications",
-    org: "Online",
-    text: "MERN Stack Development · Responsive Web Design · JavaScript Algorithms & Data Structures · UI/UX Fundamentals."
+    org: "GC University Faisalabad",
+    text: "Completed. Core coursework in data structures, databases, OOP, operating systems and web engineering."
   }
 ];
 
 export const experience = [
   {
-    date: "2025 — Present",
-    title: "Freelance Web Developer",
-    org: "Remote",
-    text: "Build responsive marketing sites and MERN dashboards for small businesses — from Figma handoff to deployment."
-  },
-  {
-    date: "2025",
+    date: "2026",
     title: "Web Development Intern",
-    org: "Software House",
-    text: "Shipped React components against a live Express/MongoDB API, wrote reusable UI, and fixed cross-browser bugs."
+    org: "SQROCK IT · India (Remote)",
+    text: "Completed a remote internship working on web development tasks with a distributed team."
   },
   {
-    date: "2024",
-    title: "Workshops & Achievements",
-    org: "University & community",
-    text: "Front-end bootcamp participant, university hackathon finalist, and active open-source contributor."
+    date: "2025 — Present",
+    title: "Self-directed Projects",
+    org: "Personal work",
+    text: "Designed, built and deployed five React and MERN applications — all live, each with its own GitHub repository."
   }
 ];
 

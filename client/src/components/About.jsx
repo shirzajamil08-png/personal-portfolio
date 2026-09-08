@@ -52,6 +52,10 @@ export default function About() {
                   <dd>{profile.role}</dd>
                 </div>
                 <div>
+                  <dt>Studying</dt>
+                  <dd>MS Artificial Intelligence</dd>
+                </div>
+                <div>
                   <dt>Location</dt>
                   <dd>{profile.location}</dd>
                 </div>
