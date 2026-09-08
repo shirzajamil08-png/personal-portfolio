@@ -1,5 +1,5 @@
 /* =========================================================
-   Shirza Jamil — 3D Portfolio
+   Shirza Jamil, 3D Portfolio
    1. Tokens & reset      5. Skills
    2. Layout & helpers    6. Projects
    3. Navigation          7. Timeline / Resume / Contact
@@ -570,7 +570,7 @@ button, input, textarea { font: inherit; color: inherit; }
   .nav__links.is-open { transform: translateY(0); }
 
   /* the anchors are inline by default, so text-align alone would not centre
-     them — they have to fill the row first */
+     them, they have to fill the row first */
   .nav__link {
     display: block;
     width: 100%;

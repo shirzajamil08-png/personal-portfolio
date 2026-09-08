@@ -1,4 +1,4 @@
-/* Static content for the site. Projects also live in MongoDB — this copy is the
+/* Static content for the site. Projects also live in MongoDB. This copy is the
    fallback the app renders when the API is unreachable (or before it responds). */
 
 export const profile = {
@@ -86,7 +86,7 @@ export const cubeFaces = {
 export const fallbackProjects = [
   {
     _id: "local-1",
-    title: "FoodExpress — Food Delivery System",
+    title: "FoodExpress: Food Delivery System",
     description:
       "Full MERN application for ordering food online: browse restaurants and menus, add items to a wishlist or cart, and place an order behind a login. React front end talking to an Express and MongoDB API.",
     tech: ["React", "Express", "MongoDB", "Mongoose", "Axios", "Bootstrap"],
@@ -99,7 +99,7 @@ export const fallbackProjects = [
   },
   {
     _id: "local-2",
-    title: "EventBook — Event Booking Platform",
+    title: "EventBook: Event Booking Platform",
     description:
       "Discover concerts, seminars and workshops, filter them by category, search by name and book a seat. Multi-page React app with client-side routing and a light/dark theme toggle.",
     tech: ["React", "React Router", "React Bootstrap", "Vite"],
@@ -123,7 +123,7 @@ export const fallbackProjects = [
   },
   {
     _id: "local-4",
-    title: "Toast & Brew — Coffee House",
+    title: "Toast & Brew: Coffee House",
     description:
       "Warm, image-led site for a coffee shop with an about section, full menu, photo gallery and a table reservation call to action, animated as you scroll.",
     tech: ["React", "Bootstrap", "AOS", "Vite"],
@@ -150,19 +150,19 @@ export const fallbackProjects = [
 
 export const education = [
   {
-    date: "2026 — Present",
+    date: "2026 - Present",
     title: "MS Artificial Intelligence",
     org: "FAST NUCES · Islamabad Campus",
     text: "Currently pursuing a master's in AI, building on a full-stack development background."
   },
   {
-    date: "2022 — 2026",
+    date: "2022 - 2026",
     title: "BS Computer Science",
     org: "GC University Faisalabad",
     text: "Completed. Core coursework in data structures, databases, OOP, operating systems and web engineering."
   },
   {
-    date: "2020 — 2022",
+    date: "2020 - 2022",
     title: "FSc Pre-Medical",
     org: "College",
     text: "Intermediate in Pre-Medical, before moving into computer science."
@@ -177,10 +177,10 @@ export const experience = [
     text: "Completed a remote internship working on web development tasks with a distributed team."
   },
   {
-    date: "2025 — Present",
+    date: "2025 - Present",
     title: "Self-directed Projects",
     org: "Personal work",
-    text: "Designed, built and deployed five React and MERN applications — all live, each with its own GitHub repository."
+    text: "Designed, built and deployed five React and MERN applications, all live, each with its own GitHub repository."
   }
 ];
 

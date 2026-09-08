@@ -1,5 +1,5 @@
 /* =========================================================
-   seed.js — load the projects into MongoDB
+   seed.js loads the projects into MongoDB
      npm run seed              insert (skips if the collection already has data)
      npm run seed -- --force   wipe the projects collection and re-insert
 
@@ -14,7 +14,7 @@ const Project = require("./models/Project");
 
 const projects = [
   {
-    title: "FoodExpress — Food Delivery System",
+    title: "FoodExpress: Food Delivery System",
     description:
       "Full MERN application for ordering food online: browse restaurants and menus, add items to a wishlist or cart, and place an order behind a login. React front end talking to an Express and MongoDB API.",
     tech: ["React", "Express", "MongoDB", "Mongoose", "Axios", "Bootstrap"],
@@ -27,7 +27,7 @@ const projects = [
     order: 1
   },
   {
-    title: "EventBook — Event Booking Platform",
+    title: "EventBook: Event Booking Platform",
     description:
       "Discover concerts, seminars and workshops, filter them by category, search by name and book a seat. Multi-page React app with client-side routing and a light/dark theme toggle.",
     tech: ["React", "React Router", "React Bootstrap", "Vite"],
@@ -51,7 +51,7 @@ const projects = [
     order: 3
   },
   {
-    title: "Toast & Brew — Coffee House",
+    title: "Toast & Brew: Coffee House",
     description:
       "Warm, image-led site for a coffee shop with an about section, full menu, photo gallery and a table reservation call to action, animated as you scroll.",
     tech: ["React", "Bootstrap", "AOS", "Vite"],

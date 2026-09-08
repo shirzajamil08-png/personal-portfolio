@@ -25,7 +25,7 @@ export default function Journey() {
     <section className="section section--alt" id="journey">
       <div className="container">
         <Reveal className="section__head" as="header">
-          <p className="section__eyebrow">04 — Journey</p>
+          <p className="section__eyebrow">04 / Journey</p>
           <h2 className="section__title">
             Education &amp; <span className="gradient-text">Experience</span>
           </h2>

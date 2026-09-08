@@ -8,7 +8,7 @@ export default function Resume() {
       <div className="container">
         <Reveal className="resume glass">
           <div className="resume__copy">
-            <p className="section__eyebrow">05 — Resume</p>
+            <p className="section__eyebrow">05 / Resume</p>
             <h2 className="section__title">
               Grab my <span className="gradient-text">CV</span>
             </h2>
@@ -27,7 +27,7 @@ export default function Resume() {
           </div>
 
           <TiltCard className="resume__sheet" max={12}>
-            {/* a real preview of the CV — click it to open the PDF */}
+            {/* a real preview of the CV. Click it to open the PDF */}
             <a
               className="sheet"
               href={profile.resume}

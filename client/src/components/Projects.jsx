@@ -55,8 +55,8 @@ export default function Projects() {
   const sourceLabel = {
     loading: "Loading projects…",
     mongodb: "● Loaded live from MongoDB",
-    "no-db": "○ API online, no database connected — showing bundled data",
-    offline: "○ API offline — showing bundled data"
+    "no-db": "○ API online, no database connected, showing bundled data",
+    offline: "○ API offline, showing bundled data"
   }[source];
 
   const visible = useMemo(
@@ -68,7 +68,7 @@ export default function Projects() {
     <section className="section" id="projects">
       <div className="container">
         <Reveal className="section__head" as="header">
-          <p className="section__eyebrow">03 — Projects</p>
+          <p className="section__eyebrow">03 / Projects</p>
           <h2 className="section__title">
             Featured <span className="gradient-text">Work</span>
           </h2>

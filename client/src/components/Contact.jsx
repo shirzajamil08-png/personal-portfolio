@@ -6,7 +6,7 @@ import { profile } from "../data/portfolio";
 const EMPTY = { name: "", email: "", subject: "", message: "" };
 
 /* Client-side rules. The same checks exist in the Mongoose schema, so bad data
-   is rejected on the server too — the browser copy is just faster feedback. */
+   is rejected on the server too. The browser copy is just faster feedback. */
 const RULES = {
   name: (v) => (v.trim().length >= 2 ? "" : "Please enter at least 2 characters."),
   email: (v) => (/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? "" : "Enter a valid email address."),
@@ -98,7 +98,7 @@ export default function Contact() {
     <section className="section section--alt" id="contact">
       <div className="container">
         <Reveal className="section__head" as="header">
-          <p className="section__eyebrow">06 — Contact</p>
+          <p className="section__eyebrow">06 / Contact</p>
           <h2 className="section__title">
             Let&rsquo;s <span className="gradient-text">Build</span> Something
           </h2>

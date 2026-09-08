@@ -7,7 +7,7 @@ export default function About() {
     <section className="section" id="about">
       <div className="container">
         <Reveal className="section__head" as="header">
-          <p className="section__eyebrow">01 — About</p>
+          <p className="section__eyebrow">01 / About</p>
           <h2 className="section__title">
             About <span className="gradient-text">Me</span>
           </h2>
@@ -17,7 +17,7 @@ export default function About() {
         <div className="about">
           <Reveal className="about__main">
             <p>
-              I&rsquo;m a MERN stack web developer who enjoys the whole journey of a product — sketching the
+              I&rsquo;m a MERN stack web developer who enjoys the whole journey of a product: sketching the
               interface, modelling the data, writing the API, and polishing the last animation. I started with
               plain <strong>HTML, CSS and JavaScript</strong>, fell for <strong>React</strong>, and now spend
               most of my time building full-stack apps with <strong>Node.js, Express and MongoDB</strong>.
@@ -25,7 +25,7 @@ export default function About() {
             <p>
               I care about the details users actually feel: fast loads, layouts that don&rsquo;t break on a
               phone, forms that explain themselves, and interfaces that are pleasant to look at. Outside of
-              client work I&rsquo;m usually rebuilding something I&rsquo;ve already built — just better.
+              client work I&rsquo;m usually rebuilding something I&rsquo;ve already built, just better.
             </p>
 
             <div className="about__grid">

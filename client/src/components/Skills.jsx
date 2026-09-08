@@ -107,7 +107,7 @@ export default function Skills() {
     <section className="section section--alt" id="skills">
       <div className="container">
         <Reveal className="section__head" as="header">
-          <p className="section__eyebrow">02 — Skills</p>
+          <p className="section__eyebrow">02 / Skills</p>
           <h2 className="section__title">
             My <span className="gradient-text">Toolkit</span>
           </h2>
@@ -117,7 +117,7 @@ export default function Skills() {
         <div className="skills">
           <Reveal className="skills__cube-wrap">
             <Cube />
-            <p className="skills__cube-cap">The MERN cube — drag it around.</p>
+            <p className="skills__cube-cap">The MERN cube. Drag it around.</p>
           </Reveal>
 
           <Reveal className="skills__bars" delay={0.1}>

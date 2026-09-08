@@ -14,7 +14,7 @@ async function request(path, options = {}) {
   try {
     body = await res.json();
   } catch {
-    // a non-JSON response (HTML error page, empty body) — treat as a failure
+    // a non-JSON response (HTML error page, empty body), treat as a failure
   }
 
   if (!res.ok) {
