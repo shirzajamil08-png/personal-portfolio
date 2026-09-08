@@ -442,14 +442,22 @@ button, input, textarea { font: inherit; color: inherit; }
 .resume__actions { display: flex; gap: .8rem; flex-wrap: wrap; margin-top: 1.4rem; }
 .resume__sheet { display: grid; place-items: center; }
 .sheet {
-  width: min(100%, 260px); aspect-ratio: 3 / 4; border-radius: var(--radius-sm);
-  background: linear-gradient(160deg, #ffffff, #d7dbf5);
-  padding: 1.6rem 1.3rem; display: grid; align-content: start; gap: .7rem;
-  box-shadow: 0 30px 60px rgba(0,0,0,.55);
+  display: block;
+  width: min(100%, 290px);
+  aspect-ratio: 210 / 297;          /* A4, so the preview is never cropped oddly */
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .55);
   animation: float 7s ease-in-out infinite;
 }
-.sheet__line { display: block; height: 9px; border-radius: 4px; background: #b9bed8; width: 100%; }
-.sheet__line--title { height: 18px; width: 70%; background: linear-gradient(90deg, #7c5cff, #22d3ee); }
+.sheet img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
 
 /* ---------- Contact ---------- */
 .contact { display: grid; grid-template-columns: .8fr 1.2fr; gap: 2rem; align-items: start; }

@@ -26,16 +26,23 @@ export default function Resume() {
             </div>
           </div>
 
-          <TiltCard className="resume__sheet" max={12} aria-hidden="true">
-            <div className="sheet">
-              <span className="sheet__line sheet__line--title" />
-              <span className="sheet__line" style={{ width: "60%" }} />
-              <span className="sheet__line" style={{ width: "85%" }} />
-              <span className="sheet__line" style={{ width: "75%" }} />
-              <span className="sheet__line" style={{ width: "90%" }} />
-              <span className="sheet__line" style={{ width: "50%" }} />
-              <span className="sheet__line" style={{ width: "80%" }} />
-            </div>
+          <TiltCard className="resume__sheet" max={12}>
+            {/* a real preview of the CV — click it to open the PDF */}
+            <a
+              className="sheet"
+              href={profile.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the resume PDF"
+            >
+              <img
+                src="/assets/resume-preview.jpg"
+                alt={`First page of ${profile.name}'s resume`}
+                loading="lazy"
+                width="794"
+                height="1123"
+              />
+            </a>
           </TiltCard>
         </Reveal>
       </div>

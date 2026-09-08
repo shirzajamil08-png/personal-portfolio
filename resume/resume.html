@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Shirza Jamil — Resume</title>
+<!--
+  This is the source of the CV.
+
+  To update it:
+    1. Edit the text below.
+    2. Open this file in Chrome, press Ctrl+P, choose "Save as PDF",
+       set Margins to "None" and tick "Background graphics".
+    3. Save over client/public/assets/resume.pdf
+    4. Take a screenshot of the page and save it as
+       client/public/assets/resume-preview.jpg (optional, it is the
+       image shown in the Resume section of the site).
+-->
+<style>
+  @page { size: A4; margin: 0; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 16mm 15mm;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.2pt;
+    line-height: 1.45;
+    color: #1e2233;
+    background: #fff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ---------- header ---------- */
+  .head {
+    border-bottom: 2.5pt solid #7c5cff;
+    padding-bottom: 9pt;
+    margin-bottom: 13pt;
+  }
+  .name {
+    font-size: 25pt;
+    font-weight: 700;
+    letter-spacing: -0.4pt;
+    color: #14162a;
+  }
+  .role {
+    font-size: 11.5pt;
+    font-weight: 600;
+    color: #6d4fe6;
+    margin-top: 1pt;
+  }
+  .contact {
+    margin-top: 7pt;
+    font-size: 9.2pt;
+    color: #4a4f68;
+  }
+  .contact span { white-space: nowrap; }
+  .dot { color: #b9bed4; padding: 0 5pt; }
+
+  /* ---------- sections ---------- */
+  h2 {
+    font-size: 10pt;
+    font-weight: 700;
+    letter-spacing: 1.4pt;
+    text-transform: uppercase;
+    color: #14162a;
+    padding-bottom: 3pt;
+    margin: 13pt 0 7pt;
+    border-bottom: 0.8pt solid #dfe2ee;
+  }
+  h2:first-of-type { margin-top: 4pt; }
+
+  p.summary { color: #3c415a; }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10pt;
+  }
+  .row + .detail { margin-bottom: 7pt; }
+
+  .title { font-weight: 700; color: #14162a; font-size: 10.6pt; }
+  .when {
+    font-size: 8.8pt;
+    color: #6f7590;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .org { color: #6d4fe6; font-size: 9.4pt; font-weight: 600; }
+  .detail { color: #454a63; font-size: 9.6pt; }
+
+  .entry { margin-bottom: 8pt; }
+  .entry:last-child { margin-bottom: 0; }
+
+  /* ---------- skills ---------- */
+  .skills { display: grid; grid-template-columns: 62pt 1fr; row-gap: 4.5pt; column-gap: 8pt; }
+  .skills dt { font-weight: 700; color: #14162a; font-size: 9.4pt; }
+  .skills dd { color: #454a63; font-size: 9.6pt; }
+
+  /* ---------- projects ---------- */
+  .proj { margin-bottom: 7.5pt; }
+  .proj:last-child { margin-bottom: 0; }
+  .link { color: #6d4fe6; font-size: 8.8pt; }
+
+  .foot {
+    margin-top: 14pt;
+    padding-top: 7pt;
+    border-top: 0.8pt solid #dfe2ee;
+    font-size: 8.6pt;
+    color: #8a8fa6;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <header class="head">
+    <div class="name">Shirza Jamil</div>
+    <div class="role">MERN Stack Web Developer</div>
+    <div class="contact">
+      <span>shirzajamil08@gmail.com</span><span class="dot">|</span>
+      <span>Pakistan</span><span class="dot">|</span>
+      <span>github.com/shirzajamil08-png</span><span class="dot">|</span>
+      <span>personal-portfolio-theta-beige-99.vercel.app</span>
+    </div>
+  </header>
+
+  <h2>Profile</h2>
+  <p class="summary">
+    MERN stack developer building responsive web applications with MongoDB, Express.js,
+    React and Node.js. Comfortable owning both the REST API and the user interface, with a
+    focus on clean, mobile-friendly layouts built in React and Bootstrap. Five applications
+    designed, built and deployed. Currently studying MS Artificial Intelligence.
+  </p>
+
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Frontend</dt>
+    <dd>HTML5, CSS3, Bootstrap, React.js, React Router, Vite, AOS, responsive web design</dd>
+    <dt>Backend</dt>
+    <dd>Node.js, Express.js, REST APIs, Nodemon</dd>
+    <dt>Database</dt>
+    <dd>MongoDB, Mongoose</dd>
+    <dt>Tools</dt>
+    <dd>Git, GitHub, VS Code, Axios, Vercel</dd>
+  </dl>
+
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="row">
+      <span class="title">MS Artificial Intelligence</span>
+      <span class="when">2026 &ndash; Present</span>
+    </div>
+    <div class="org">FAST NUCES, Islamabad Campus</div>
+  </div>
+
+  <div class="entry">
+    <div class="row">
+      <span class="title">BS Computer Science</span>
+      <span class="when">2022 &ndash; 2026</span>
+    </div>
+    <div class="org">GC University Faisalabad</div>
+    <div class="detail">
+      Data structures, databases, object-oriented programming, operating systems and web engineering.
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="row">
+      <span class="title">FSc Pre-Medical</span>
+      <span class="when">2020 &ndash; 2022</span>
+    </div>
+  </div>
+
+  <h2>Experience</h2>
+
+  <div class="entry">
+    <div class="row">
+      <span class="title">Web Development Intern</span>
+      <span class="when">2026</span>
+    </div>
+    <div class="org">SQROCK IT, India &mdash; Remote</div>
+    <div class="detail">
+      Completed a remote internship working on web development tasks with a distributed team.
+    </div>
+  </div>
+
+  <div class="entry">
+    <div class="row">
+      <span class="title">Self-directed Projects</span>
+      <span class="when">2024 &ndash; Present</span>
+    </div>
+    <div class="org">Personal work</div>
+    <div class="detail">
+      Designed, built and deployed five React and MERN applications, each with its own
+      GitHub repository and live deployment on Vercel.
+    </div>
+  </div>
+
+  <h2>Projects</h2>
+
+  <div class="proj">
+    <div class="row">
+      <span class="title">FoodExpress &mdash; Food Delivery System</span>
+      <span class="when">MERN</span>
+    </div>
+    <div class="detail">
+      Restaurants, menus, wishlist, cart and checkout behind a login. React front end
+      talking to an Express and MongoDB API.
+      <span class="link">food-eliverysystem.vercel.app</span>
+    </div>
+  </div>
+
+  <div class="proj">
+    <div class="row">
+      <span class="title">EventBook &mdash; Event Booking Platform</span>
+      <span class="when">React</span>
+    </div>
+    <div class="detail">
+      Browse, search and filter events by category and book a seat. Client-side routing
+      with a light/dark theme toggle.
+      <span class="link">event-booking-website-liard.vercel.app</span>
+    </div>
+  </div>
+
+  <div class="proj">
+    <div class="row">
+      <span class="title">Car Rental Website</span>
+      <span class="when">React</span>
+    </div>
+    <div class="detail">
+      Fleet browsing with pickup location, pickup and return dates, and availability search.
+      <span class="link">car-rental-website-snowy.vercel.app</span>
+    </div>
+  </div>
+
+  <div class="proj">
+    <div class="row">
+      <span class="title">Toast &amp; Brew &mdash; Coffee House</span>
+      <span class="when">React</span>
+    </div>
+    <div class="detail">
+      Menu, photo gallery and table reservation site with scroll-triggered animations.
+      <span class="link">coffee-website-navy-five.vercel.app</span>
+    </div>
+  </div>
+
+  <div class="proj">
+    <div class="row">
+      <span class="title">Personal Portfolio</span>
+      <span class="when">MERN</span>
+    </div>
+    <div class="detail">
+      React front end with an Express REST API and MongoDB Atlas storing the project list
+      and every contact-form message.
+      <span class="link">personal-portfolio-theta-beige-99.vercel.app</span>
+    </div>
+  </div>
+
+  <div class="foot">References available on request</div>
+
+</body>
+</html>

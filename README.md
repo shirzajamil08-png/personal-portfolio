@@ -159,7 +159,11 @@ pointer and to scroll.
 3. **Projects** — edit `server/seed.js` and re-run `npm run seed --prefix server -- --force`,
    or POST to `/api/projects` with your admin key. Keep
    `client/src/data/portfolio.js` in sync so the offline fallback matches.
-4. **Resume** — replace `client/public/assets/resume.pdf` with your real CV.
+4. **Resume** — the CV is written as HTML in `resume/resume.html`. To change it:
+   edit that file, open it in Chrome, press **Ctrl+P** → *Save as PDF*, set
+   **Margins: None** and tick **Background graphics**, then save over
+   `client/public/assets/resume.pdf`. The image shown in the Resume section is
+   `client/public/assets/resume-preview.jpg` — a screenshot of the same page.
 5. **Colors** — the `:root` block at the top of `client/src/index.css`.
 
 ## Deploying to GitHub + Vercel
