@@ -68,7 +68,7 @@ const projects = [
       "The site you are on. React front end with a Three.js particle scene and CSS 3D cards, an Express REST API, and MongoDB Atlas storing these projects and every contact message.",
     tech: ["React", "Three.js", "Express", "MongoDB", "Framer Motion"],
     tags: ["fullstack", "mern", "react"],
-    image: "",
+    image: "/assets/projects/portfolio.jpg",
     thumb: 6,
     emoji: "\u{1F3A8}",
     github: "https://github.com/shirzajamil08-png/personal-portfolio",

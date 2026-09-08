@@ -57,9 +57,10 @@ export default function Hero() {
           </h2>
 
           <p className="hero__bio">
-            I build fast, responsive and genuinely fun web experiences with the <strong>MERN stack</strong> —
-            MongoDB, Express.js, React and Node.js. From REST APIs and authentication flows to pixel-tight
-            interfaces and 3D interactions, I like owning a product end to end.
+            I build fast, responsive web applications with the <strong>MERN stack</strong> —
+            MongoDB, Express.js, React and Node.js. From REST APIs and database models to
+            clean, mobile-friendly interfaces in React and Bootstrap, I like owning a product
+            end to end.
           </p>
 
           <div className="hero__cta">

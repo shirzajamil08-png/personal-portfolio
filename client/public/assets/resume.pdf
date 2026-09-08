@@ -9,105 +9,132 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
 endobj
 4 0 obj
-<< /Length 2146 >>
+<< /Length 2703 >>
 stream
 BT
-1 0 0 1 62 762 Tm
-/F2 22 Tf
+1 0 0 1 56 790 Tm
+/F2 20 Tf
 (SHIRZA JAMIL) Tj
-0 -26 Td
-/F1 12 Tf
+0 -24 Td
+/F1 11.5 Tf
 (MERN Stack Web Developer) Tj
-0 -18 Td
-/F1 10 Tf
-(shirzajamil08@gmail.com  |  Pakistan  |  github.com/shirza) Tj
-0 -6 Td
-0 -22 Td
-/F2 12 Tf
+0 -16 Td
+/F1 9.5 Tf
+(shirzajamil08@gmail.com  |  Pakistan  |  github.com/shirzajamil08-png) Tj
+0 -13 Td
+/F1 9.5 Tf
+(personal-portfolio-theta-beige-99.vercel.app) Tj
+0 -26 Td
+/F2 11.5 Tf
 (PROFILE) Tj
 0 -16 Td
-/F1 10 Tf
-(Full-stack web developer building responsive applications with MongoDB,) Tj
-0 -14 Td
-/F1 10 Tf
-(Express.js, React and Node.js. Comfortable owning both the REST API and) Tj
-0 -14 Td
-/F1 10 Tf
-(the user interface, from data modelling to final UI polish.) Tj
-0 -6 Td
-0 -22 Td
-/F2 12 Tf
+/F1 9.5 Tf
+(MERN stack developer building responsive web applications with MongoDB,) Tj
+0 -13 Td
+/F1 9.5 Tf
+(Express.js, React and Node.js. Comfortable owning both the REST API and the) Tj
+0 -13 Td
+/F1 9.5 Tf
+(user interface, with a focus on clean, mobile-friendly layouts. Currently) Tj
+0 -13 Td
+/F1 9.5 Tf
+(studying MS Artificial Intelligence.) Tj
+0 -24 Td
+/F2 11.5 Tf
 (SKILLS) Tj
 0 -16 Td
-/F1 10 Tf
-(Frontend: HTML5, CSS3, JavaScript \(ES6+\), React.js, Next.js, Bootstrap,) Tj
-0 -14 Td
-/F1 10 Tf
-(Tailwind CSS, responsive design, Three.js) Tj
-0 -14 Td
-/F1 10 Tf
-(Backend: Node.js, Express.js, REST APIs, JWT authentication, Nodemon) Tj
-0 -14 Td
-/F1 10 Tf
+/F1 9.5 Tf
+(Frontend: HTML5, CSS3, Bootstrap, React.js, React Router, Vite, AOS,) Tj
+0 -13 Td
+/F1 9.5 Tf
+(responsive web design) Tj
+0 -13 Td
+/F1 9.5 Tf
+(Backend: Node.js, Express.js, REST APIs, Nodemon) Tj
+0 -13 Td
+/F1 9.5 Tf
 (Database: MongoDB, Mongoose) Tj
-0 -14 Td
-/F1 10 Tf
-(Tools: Git, GitHub, Postman, Figma, VS Code) Tj
-0 -6 Td
-0 -22 Td
-/F2 12 Tf
+0 -13 Td
+/F1 9.5 Tf
+(Tools: Git, GitHub, VS Code, Axios) Tj
+0 -24 Td
+/F2 11.5 Tf
 (EDUCATION) Tj
 0 -16 Td
-/F1 10 Tf
-(BS Computer Science  -  2023 to Present) Tj
-0 -14 Td
-/F1 10 Tf
-(Intermediate, Pre-Engineering  -  2021 to 2023) Tj
-0 -14 Td
-/F1 10 Tf
-(Certifications: MERN Stack Development, Responsive Web Design,) Tj
-0 -14 Td
-/F1 10 Tf
-(JavaScript Algorithms and Data Structures, UI/UX Fundamentals) Tj
-0 -6 Td
-0 -22 Td
-/F2 12 Tf
+/F2 9.5 Tf
+(MS Artificial Intelligence  -  2026 to Present) Tj
+0 -12 Td
+/F1 9.5 Tf
+(FAST NUCES, Islamabad Campus) Tj
+0 -15 Td
+/F2 9.5 Tf
+(BS Computer Science  -  2022 to 2026) Tj
+0 -12 Td
+/F1 9.5 Tf
+(GC University Faisalabad) Tj
+0 -15 Td
+/F2 9.5 Tf
+(FSc Pre-Medical  -  2020 to 2022) Tj
+0 -24 Td
+/F2 11.5 Tf
 (EXPERIENCE) Tj
 0 -16 Td
-/F2 10 Tf
-(Freelance Web Developer  -  2025 to Present) Tj
-0 -14 Td
-/F1 10 Tf
-(Responsive marketing sites and MERN dashboards for small businesses.) Tj
-0 -18 Td
-/F2 10 Tf
-(Web Development Intern  -  2025) Tj
-0 -14 Td
-/F1 10 Tf
-(Built React components against a live Express and MongoDB API.) Tj
-0 -6 Td
+/F2 9.5 Tf
+(Web Development Intern  -  2026) Tj
+0 -12 Td
+/F1 9.5 Tf
+(SQROCK IT, India \(Remote\)) Tj
+0 -12 Td
+/F1 9.5 Tf
+(Completed a remote internship working on web development tasks with a) Tj
+0 -12 Td
+/F1 9.5 Tf
+(distributed team.) Tj
 0 -22 Td
-/F2 12 Tf
+/F2 11.5 Tf
 (PROJECTS) Tj
 0 -16 Td
-/F1 10 Tf
-(ShopSphere - MERN e-commerce platform with admin dashboard) Tj
+/F2 9.5 Tf
+(FoodExpress - Food Delivery System \(MERN\)) Tj
+0 -12 Td
+/F1 9.5 Tf
+(Restaurants, menus, wishlist, cart and checkout. React front end with an) Tj
+0 -12 Td
+/F1 9.5 Tf
+(Express and MongoDB API.   food-eliverysystem.vercel.app) Tj
 0 -14 Td
-/F1 10 Tf
-(TaskFlow - Kanban team task manager with JWT auth) Tj
+/F2 9.5 Tf
+(EventBook - Event Booking Platform \(React\)) Tj
+0 -12 Td
+/F1 9.5 Tf
+(Browse, search and filter events, with routing and a theme toggle.) Tj
+0 -12 Td
+/F1 9.5 Tf
+(event-booking-website-liard.vercel.app) Tj
 0 -14 Td
-/F1 10 Tf
-(ChatterBox - realtime chat app built on Socket.io) Tj
+/F2 9.5 Tf
+(Car Rental Website \(React\)) Tj
+0 -12 Td
+/F1 9.5 Tf
+(Fleet browsing with pickup location and date search.) Tj
+0 -12 Td
+/F1 9.5 Tf
+(car-rental-website-snowy.vercel.app) Tj
 0 -14 Td
-/F1 10 Tf
-(DevBlog CMS - markdown blogging platform with image uploads) Tj
+/F2 9.5 Tf
+(Toast & Brew - Coffee House \(React\)) Tj
+0 -12 Td
+/F1 9.5 Tf
+(Menu, gallery and reservation site with scroll animations.) Tj
+0 -12 Td
+/F1 9.5 Tf
+(coffee-website-navy-five.vercel.app) Tj
 0 -14 Td
-/F1 10 Tf
-(WeatherScope - React dashboard on a live weather API) Tj
-0 -10 Td
-0 -18 Td
-/F1 9 Tf
-([ Placeholder resume - replace assets/resume.pdf with your real CV ]) Tj
+/F2 9.5 Tf
+(Personal Portfolio \(MERN\)) Tj
+0 -12 Td
+/F1 9.5 Tf
+(React front end, Express REST API, MongoDB Atlas for projects and messages.) Tj
 ET
 endstream
 endobj
@@ -124,10 +151,10 @@ xref
 0000000058 00000 n 
 0000000115 00000 n 
 0000000251 00000 n 
-0000002449 00000 n 
-0000002546 00000 n 
+0000003006 00000 n 
+0000003103 00000 n 
 trailer
 << /Size 7 /Root 1 0 R >>
 startxref
-2648
+3205
 %%EOF

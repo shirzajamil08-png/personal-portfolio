@@ -19,15 +19,15 @@ export const profile = {
 
 export const roles = [
   "MERN Stack Developer",
-  "React.js Enthusiast",
+  "React.js Developer",
   "Node & Express Backend Dev",
-  "UI/UX Focused Coder"
+  "Responsive Web Designer"
 ];
 
 export const stats = [
   { value: 5, label: "Projects deployed" },
-  { value: 12, label: "Technologies" },
-  { value: 4, label: "Years coding" }
+  { value: 18, label: "Technologies" },
+  { value: 2, label: "Years in web dev" }
 ];
 
 export const aboutCards = [
@@ -44,7 +44,7 @@ export const aboutCards = [
   {
     icon: "\u{1F4A1}",
     title: "Interests",
-    text: "Full-stack architecture, REST APIs, 3D on the web, design systems and performance tuning."
+    text: "Full-stack architecture, REST APIs, responsive layouts, and clean component-driven React front ends."
   },
   {
     icon: "\u{26A1}",
@@ -55,20 +55,21 @@ export const aboutCards = [
 
 export const skills = [
   { name: "HTML5", level: 95 },
-  { name: "CSS3 / Bootstrap", level: 92 },
-  { name: "JavaScript (ES6+)", level: 90 },
+  { name: "CSS3", level: 92 },
+  { name: "Bootstrap", level: 90 },
+  { name: "Responsive Web Design", level: 90 },
   { name: "React.js", level: 88 },
   { name: "Node.js & Express", level: 85 },
-  { name: "MongoDB / Mongoose", level: 82 },
-  { name: "UI/UX Design", level: 75 },
+  { name: "MongoDB & Mongoose", level: 82 },
+  { name: "JavaScript (ES6+)", level: 70 },
   { name: "Git & GitHub", level: 70 }
 ];
 
 export const chips = [
-  "HTML5", "CSS3", "JavaScript", "React.js", "Next.js",
-  "Node.js", "Express.js", "MongoDB", "Mongoose", "REST APIs",
-  "JWT Auth", "Bootstrap", "Tailwind CSS", "Nodemon", "Socket.io",
-  "Git & GitHub", "Figma", "Postman", "Three.js", "Responsive Design"
+  "HTML5", "CSS3", "Bootstrap", "Responsive Design", "React.js",
+  "React Router", "Vite", "AOS", "JavaScript", "Node.js",
+  "Express.js", "MongoDB", "Mongoose", "REST APIs", "Axios",
+  "Nodemon", "Git & GitHub", "VS Code"
 ];
 
 export const cubeFaces = {
@@ -139,7 +140,7 @@ export const fallbackProjects = [
       "The site you are on. React front end with a Three.js particle scene and CSS 3D cards, an Express REST API, and MongoDB Atlas storing these projects and every contact message.",
     tech: ["React", "Three.js", "Express", "MongoDB", "Framer Motion"],
     tags: ["fullstack", "mern", "react"],
-    image: "",
+    image: "/assets/projects/portfolio.jpg",
     emoji: "\u{1F3A8}",
     thumb: 6,
     github: "https://github.com/shirzajamil08-png/personal-portfolio",
@@ -159,6 +160,12 @@ export const education = [
     title: "BS Computer Science",
     org: "GC University Faisalabad",
     text: "Completed. Core coursework in data structures, databases, OOP, operating systems and web engineering."
+  },
+  {
+    date: "2020 — 2022",
+    title: "FSc Pre-Medical",
+    org: "College",
+    text: "Intermediate in Pre-Medical, before moving into computer science."
   }
 ];
 
