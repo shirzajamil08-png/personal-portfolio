@@ -30,7 +30,19 @@ export default function Journey() {
                 return (
                   <li className="rail__row" key={item.title + item.date}>
                     <span className="rail__node">
-                      <Icon />
+                      {/* company logo when there is one, otherwise the generic mark */}
+                      {item.logo ? (
+                        <img
+                          className="rail__logo"
+                          src={item.logo}
+                          alt=""
+                          onError={(e) => {
+                            e.currentTarget.style.display = "none";
+                            e.currentTarget.nextSibling.style.display = "block";
+                          }}
+                        />
+                      ) : null}
+                      <Icon style={item.logo ? { display: "none" } : undefined} />
                     </span>
 
                     <div className="rail__body">

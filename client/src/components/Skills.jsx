@@ -1,7 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import Reveal from "./Reveal";
-import { chips, skills } from "../data/portfolio";
-import { iconFor } from "./techIcons";
+import { capabilities, skills, stackGroups } from "../data/portfolio";
+import { iconFor, ReactIcon, NodeIcon, MongoIcon, GitIcon } from "./techIcons";
+
+const GROUP_MARKS = {
+  react: ReactIcon,
+  node: NodeIcon,
+  mongo: MongoIcon,
+  git: GitIcon
+};
 
 function SkillBar({ name, level, index }) {
   const ref = useRef(null);
@@ -15,7 +22,7 @@ function SkillBar({ name, level, index }) {
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setShown(true), index * 90);
+          setTimeout(() => setShown(true), index * 80);
           obs.disconnect();
         }
       },
@@ -48,33 +55,65 @@ export default function Skills() {
       <div className="wrap">
         <Reveal className="head" as="header">
           <p className="eyebrow">Skills</p>
-          <h2 className="h2">The tools I reach for every day</h2>
+          <h2 className="h2">What I do and what I build it with</h2>
         </Reveal>
 
-        <div className="skills">
-          <Reveal className="bars">
+        {/* ---------- what I do ---------- */}
+        <Reveal className="block">
+          <h3 className="block__title">
+            Skills<span className="accent">.</span>
+          </h3>
+          <ul className="pills">
+            {capabilities.map((c) => (
+              <li key={c}>{c}</li>
+            ))}
+          </ul>
+        </Reveal>
+
+        {/* ---------- the tools, grouped ---------- */}
+        <Reveal className="block" delay={0.06}>
+          <h3 className="block__title">
+            Stack<span className="accent">.</span>
+          </h3>
+
+          <div className="groups">
+            {stackGroups.map((g) => {
+              const Mark = GROUP_MARKS[g.mark] || ReactIcon;
+              return (
+                <article className="group" key={g.title}>
+                  <header className="group__head">
+                    <span className="group__mark"><Mark /></span>
+                    <h4>{g.title}</h4>
+                  </header>
+
+                  <ul className="group__items">
+                    {g.items.map((item) => {
+                      const Icon = iconFor(item);
+                      return (
+                        <li key={item}>
+                          <span className="group__icon"><Icon /></span>
+                          <span className="group__label">{item}</span>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </article>
+              );
+            })}
+          </div>
+        </Reveal>
+
+        {/* ---------- proficiency ---------- */}
+        <Reveal className="block" delay={0.1}>
+          <h3 className="block__title">
+            Level<span className="accent">.</span>
+          </h3>
+          <div className="bars bars--split">
             {skills.map((s, i) => (
               <SkillBar key={s.name} name={s.name} level={s.level} index={i} />
             ))}
-          </Reveal>
-
-          <Reveal delay={0.1}>
-            <p className="lead" style={{ marginBottom: "1.5rem" }}>
-              Everything below is something I have actually shipped with, not just read about.
-            </p>
-            <div className="stack">
-              {chips.map((c) => {
-                const Icon = iconFor(c);
-                return (
-                  <span key={c}>
-                    <Icon className="stack__icon" />
-                    {c}
-                  </span>
-                );
-              })}
-            </div>
-          </Reveal>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

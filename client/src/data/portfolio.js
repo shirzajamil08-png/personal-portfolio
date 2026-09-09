@@ -65,21 +65,38 @@ export const skills = [
   { name: "Git & GitHub", level: 70 }
 ];
 
-export const chips = [
-  "HTML5", "CSS3", "Bootstrap", "Responsive Design", "React.js",
-  "React Router", "Vite", "AOS", "JavaScript", "Node.js",
-  "Express.js", "MongoDB", "Mongoose", "REST APIs", "Axios",
-  "Nodemon", "Git & GitHub", "VS Code"
+export const capabilities = [
+  "MERN Stack Development",
+  "Frontend Development",
+  "Backend & REST APIs",
+  "Responsive Web Design",
+  "Database Modelling",
+  "Deployment & Hosting"
 ];
 
-export const cubeFaces = {
-  front: "React",
-  back: "Node",
-  right: "Mongo",
-  left: "Express",
-  top: "JS",
-  bottom: "CSS"
-};
+/* grouped tools, rendered as cards in the Stack block */
+export const stackGroups = [
+  {
+    title: "Frontend",
+    mark: "react",
+    items: ["HTML5", "CSS3", "Bootstrap", "React.js", "React Router", "Vite"]
+  },
+  {
+    title: "Backend",
+    mark: "node",
+    items: ["Node.js", "Express.js", "REST APIs", "Nodemon"]
+  },
+  {
+    title: "Database",
+    mark: "mongo",
+    items: ["MongoDB", "Mongoose"]
+  },
+  {
+    title: "Tools",
+    mark: "git",
+    items: ["Git & GitHub", "VS Code", "Axios", "AOS"]
+  }
+];
 
 /* Fallback copy of the projects that seed.js loads into MongoDB.
    Keep this in sync with server/seed.js. */
@@ -174,6 +191,7 @@ export const experience = [
     date: "2026",
     title: "Web Development Intern",
     org: "SQROCK IT · India (Remote)",
+    logo: "/assets/sqrock.png",
     text: "Completed a remote internship working on web development tasks with a distributed team."
   },
   {
