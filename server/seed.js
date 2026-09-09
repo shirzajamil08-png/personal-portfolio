@@ -65,8 +65,8 @@ const projects = [
   {
     title: "This MERN Portfolio",
     description:
-      "The site you are on. React front end with a Three.js particle scene and CSS 3D cards, an Express REST API, and MongoDB Atlas storing these projects and every contact message.",
-    tech: ["React", "Three.js", "Express", "MongoDB", "Framer Motion"],
+      "The site you are on. React front end, an Express REST API, and MongoDB Atlas storing these projects and every message sent through the contact form.",
+    tech: ["React", "Express", "MongoDB", "Framer Motion", "Vite"],
     tags: ["fullstack", "mern", "react"],
     image: "/assets/projects/portfolio.jpg",
     thumb: 6,
