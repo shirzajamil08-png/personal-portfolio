@@ -314,10 +314,10 @@ h1, h2, h3, h4 {
 .hero__avatar img {
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 32%;
-  /* the LinkedIn photo carries an #OPENTOWORK ring around its edge;
-     scaling up pushes that ring outside the visible circle */
-  transform: scale(1.24);
+  object-position: center 30%;
+  /* profile.jpg is already cropped inside the #OPENTOWORK ring, so this only
+     needs a hair of scale to guarantee no gap at the circle's edge */
+  transform: scale(1.02);
 }
 .hero__avatar-fallback {
   font-size: 2rem; font-weight: 500; color: #fff; letter-spacing: -0.03em;
