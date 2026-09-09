@@ -211,6 +211,23 @@ export const BriefcaseIcon = svg(
   </>
 );
 
+export const BankIcon = svg(
+  <>
+    <path d="M3.2 9.4 12 4.4l8.8 5" />
+    <path d="M5.4 9.8v8.4M9.8 9.8v8.4M14.2 9.8v8.4M18.6 9.8v8.4" />
+    <path d="M2.8 20.4h18.4" />
+  </>
+);
+
+export const SchoolIcon = svg(
+  <>
+    <path d="M4.2 20.4V7.6l7.8-3.2 7.8 3.2v12.8" />
+    <path d="M2.6 20.4h18.8" />
+    <path d="M9.6 20.4v-4.2h4.8v4.2" />
+    <path d="M9.8 10.4h4.4" strokeWidth="1.2" />
+  </>
+);
+
 export const ArrowUpIcon = svg(
   <>
     <path d="M12 19.5V5" />

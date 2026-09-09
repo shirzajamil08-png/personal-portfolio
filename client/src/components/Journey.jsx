@@ -1,31 +1,11 @@
 import Reveal from "./Reveal";
 import { education, experience } from "../data/portfolio";
-import { CapIcon, BriefcaseIcon } from "./techIcons";
+import { CapIcon, BriefcaseIcon, CodeIcon, BankIcon, SchoolIcon } from "./techIcons";
 
-function Track({ icon: Icon, label, caption, items }) {
-  return (
-    <Reveal>
-      <header className="journey__head">
-        <span className="journey__icon"><Icon /></span>
-        <span>
-          <strong>{label}</strong>
-          <em>{caption}</em>
-        </span>
-      </header>
-
-      <ol className="path">
-        {items.map((item) => (
-          <li className="path__item" key={item.title + item.date}>
-            <span className="path__when">{item.date}</span>
-            <h4>{item.title}</h4>
-            <p className="path__org">{item.org}</p>
-            <p>{item.text}</p>
-          </li>
-        ))}
-      </ol>
-    </Reveal>
-  );
-}
+/* one icon per experience row, in order */
+const EXP_ICONS = [BriefcaseIcon, CodeIcon];
+/* one icon per education row, in order */
+const EDU_ICONS = [CapIcon, BankIcon, SchoolIcon];
 
 export default function Journey() {
   return (
@@ -33,12 +13,67 @@ export default function Journey() {
       <div className="wrap">
         <Reveal className="head" as="header">
           <p className="eyebrow">Journey</p>
-          <h2 className="h2">Education and experience</h2>
+          <h2 className="h2">Where I studied and worked</h2>
         </Reveal>
 
-        <div className="journey">
-          <Track icon={CapIcon} label="Education" caption={`${education.length} qualifications`} items={education} />
-          <Track icon={BriefcaseIcon} label="Experience" caption="Internship and personal work" items={experience} />
+        <div className="jrn">
+          {/* ---------- experience, with a rail down the left ---------- */}
+          <Reveal className="jrn__card jrn__card--wide">
+            <header className="jrn__title">
+              <h3>Experience<span className="accent">.</span></h3>
+              <BriefcaseIcon className="jrn__mark" />
+            </header>
+
+            <ol className="rail">
+              {experience.map((item, i) => {
+                const Icon = EXP_ICONS[i] || BriefcaseIcon;
+                return (
+                  <li className="rail__row" key={item.title + item.date}>
+                    <span className="rail__node">
+                      <Icon />
+                    </span>
+
+                    <div className="rail__body">
+                      <div className="rail__top">
+                        <h4>{item.title}</h4>
+                        <span className="chip">{item.date}</span>
+                      </div>
+                      <p className="rail__org">{item.org}</p>
+                      <p className="rail__text">{item.text}</p>
+                    </div>
+                  </li>
+                );
+              })}
+            </ol>
+          </Reveal>
+
+          {/* ---------- education ---------- */}
+          <Reveal className="jrn__card" delay={0.08}>
+            <header className="jrn__title">
+              <h3>Education<span className="accent">.</span></h3>
+              <CapIcon className="jrn__mark" />
+            </header>
+
+            <ul className="edu">
+              {education.map((item, i) => {
+                const Icon = EDU_ICONS[i] || CapIcon;
+                return (
+                  <li className="edu__row" key={item.title + item.date}>
+                    <span className="edu__icon">
+                      <Icon />
+                    </span>
+
+                    <div className="edu__body">
+                      <p className="edu__org">{item.org}</p>
+                      <p className="edu__title">{item.title}</p>
+                    </div>
+
+                    <span className="edu__when">{item.date}</span>
+                  </li>
+                );
+              })}
+            </ul>
+          </Reveal>
         </div>
       </div>
     </section>
