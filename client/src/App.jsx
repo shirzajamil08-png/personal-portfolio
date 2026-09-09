@@ -12,6 +12,7 @@ import Journey from "./components/Journey";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -41,6 +42,7 @@ export default function App() {
       </main>
 
       <Footer />
+      <BackToTop />
     </>
   );
 }

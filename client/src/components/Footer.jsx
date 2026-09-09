@@ -1,4 +1,5 @@
 import { navLinks, profile } from "../data/portfolio";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <a href="#home" className="nav__logo">
-            <span className="nav__logo-mark">{profile.initials}</span>
+            <Logo size={38} id={"logo-footer"} />
             <span className="nav__logo-text">
               shirza<span className="accent">.dev</span>
             </span>
@@ -41,7 +42,6 @@ export default function Footer() {
         <p>
           © {new Date().getFullYear()} {profile.name}. Built with React, Node.js, Express, MongoDB &amp; Three.js.
         </p>
-        <a href="#home" className="to-top" aria-label="Back to top">↑</a>
       </div>
     </footer>
   );

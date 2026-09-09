@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { navLinks, profile } from "../data/portfolio";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [stuck, setStuck] = useState(false);
@@ -47,7 +48,7 @@ export default function Navbar() {
     <header className={`nav ${stuck ? "is-stuck" : ""}`}>
       <div className="container nav__inner">
         <a href="#home" className="nav__logo" aria-label="Home">
-          <span className="nav__logo-mark">{profile.initials}</span>
+          <Logo size={38} id={"logo-nav"} />
           <span className="nav__logo-text">
             shirza<span className="accent">.dev</span>
           </span>

@@ -20,6 +20,15 @@ export default function Hero() {
   const typed = useTypewriter(roles);
   const statsRef = useRef(null);
   const [counting, setCounting] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  /* the scroll hint fades away as soon as the visitor takes the hint */
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     const el = statsRef.current;
@@ -116,10 +125,18 @@ export default function Hero() {
                     <stop offset="55%" stopColor="#22d3ee" />
                     <stop offset="100%" stopColor="#f472b6" />
                   </linearGradient>
+                  {/* keeps the figure inside the circle, the way a photo would be cropped */}
+                  <clipPath id="avClip">
+                    <circle cx="100" cy="100" r="96" />
+                  </clipPath>
                 </defs>
+
                 <circle cx="100" cy="100" r="96" fill="url(#av)" opacity=".18" />
-                <circle cx="100" cy="78" r="34" fill="url(#av)" />
-                <path d="M28 186c6-42 34-64 72-64s66 22 72 64z" fill="url(#av)" />
+
+                <g clipPath="url(#avClip)">
+                  <circle cx="100" cy="80" r="32" fill="url(#av)" />
+                  <ellipse cx="100" cy="190" rx="58" ry="52" fill="url(#av)" />
+                </g>
               </svg>
             </div>
 
@@ -148,7 +165,13 @@ export default function Hero() {
         </Reveal>
       </div>
 
-      <a href="#about" className="scroll-hint" aria-label="Scroll to About">
+      {/* pinned to the viewport, not to the end of the hero, so it is visible
+          straight away however tall the hero content grows */}
+      <a
+        href="#about"
+        className={`scroll-hint ${scrolled ? "is-gone" : ""}`}
+        aria-label="Scroll to About"
+      >
         <span className="mouse"><span /></span>
         <em>scroll</em>
       </a>

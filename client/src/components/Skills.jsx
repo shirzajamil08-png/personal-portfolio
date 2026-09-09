@@ -1,6 +1,25 @@
 import { useEffect, useRef, useState } from "react";
 import Reveal from "./Reveal";
 import { chips, cubeFaces, skills } from "../data/portfolio";
+import {
+  ReactIcon,
+  NodeIcon,
+  MongoIcon,
+  ExpressIcon,
+  JsIcon,
+  CssIcon,
+  iconFor
+} from "./techIcons";
+
+/* each cube face carries its own mark and its brand tint */
+const FACE_ICONS = {
+  front: ReactIcon,
+  back: NodeIcon,
+  right: MongoIcon,
+  left: ExpressIcon,
+  top: JsIcon,
+  bottom: CssIcon
+};
 
 /** The draggable MERN cube. Spins on its own until you grab it. */
 function Cube() {
@@ -57,11 +76,15 @@ function Cube() {
       onMouseDown={onDown}
       onTouchStart={onDown}
     >
-      {Object.entries(cubeFaces).map(([face, label]) => (
-        <div key={face} className={`cube__face cube__face--${face}`}>
-          {label}
-        </div>
-      ))}
+      {Object.entries(cubeFaces).map(([face, label]) => {
+        const Icon = FACE_ICONS[face];
+        return (
+          <div key={face} className={`cube__face cube__face--${face}`}>
+            <Icon className="cube__icon" />
+            <span className="cube__label">{label}</span>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -89,10 +112,15 @@ function SkillBar({ name, level, index }) {
     return () => obs.disconnect();
   }, [index]);
 
+  const Icon = iconFor(name);
+
   return (
     <div className="skill" ref={ref}>
       <div className="skill__top">
-        <span>{name}</span>
+        <span>
+          <Icon className="skill__icon" />
+          {name}
+        </span>
         <em>{level}%</em>
       </div>
       <div className="bar">
@@ -116,7 +144,11 @@ export default function Skills() {
 
         <div className="skills">
           <Reveal className="skills__cube-wrap">
-            <Cube />
+            {/* the stage reserves room for the cube's corners as it spins,
+                so it can never overlap the caption below */}
+            <div className="skills__cube-stage">
+              <Cube />
+            </div>
             <p className="skills__cube-cap">The MERN cube. Drag it around.</p>
           </Reveal>
 
@@ -128,9 +160,15 @@ export default function Skills() {
         </div>
 
         <Reveal className="chips">
-          {chips.map((c) => (
-            <span key={c}>{c}</span>
-          ))}
+          {chips.map((c) => {
+            const Icon = iconFor(c);
+            return (
+              <span key={c}>
+                <Icon className="chip__icon" />
+                {c}
+              </span>
+            );
+          })}
         </Reveal>
       </div>
     </section>

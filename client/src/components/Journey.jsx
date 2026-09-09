@@ -1,10 +1,20 @@
 import Reveal from "./Reveal";
 import { education, experience } from "../data/portfolio";
+import { CapIcon, BriefcaseIcon } from "./techIcons";
 
-function Timeline({ heading, items }) {
+function Timeline({ icon: Icon, label, caption, items, tint }) {
   return (
     <Reveal className="timeline__col">
-      <h3 className="timeline__heading">{heading}</h3>
+      <header className={`tl__header tl__header--${tint}`}>
+        <span className="tl__badge">
+          <Icon />
+        </span>
+        <span className="tl__headtext">
+          <strong>{label}</strong>
+          <em>{caption}</em>
+        </span>
+      </header>
+
       <ol className="tl">
         {items.map((item) => (
           <li className="tl__item" key={item.title + item.date}>
@@ -33,8 +43,20 @@ export default function Journey() {
         </Reveal>
 
         <div className="timeline">
-          <Timeline heading="🎓 Education" items={education} />
-          <Timeline heading="💼 Experience" items={experience} />
+          <Timeline
+            icon={CapIcon}
+            label="Education"
+            caption={`${education.length} qualifications`}
+            items={education}
+            tint="violet"
+          />
+          <Timeline
+            icon={BriefcaseIcon}
+            label="Experience"
+            caption="Internship and personal work"
+            items={experience}
+            tint="cyan"
+          />
         </div>
       </div>
     </section>

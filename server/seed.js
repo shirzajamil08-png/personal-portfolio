@@ -23,8 +23,7 @@ const projects = [
     thumb: 1,
     github: "https://github.com/shirzajamil08-png/food-_elivery_system",
     demo: "https://food-eliverysystem.vercel.app/",
-    featured: true,
-    order: 1
+    order: 4
   },
   {
     title: "EventBook: Event Booking Platform",
@@ -36,7 +35,7 @@ const projects = [
     thumb: 2,
     github: "https://github.com/shirzajamil08-png/event-booking-website",
     demo: "https://event-booking-website-liard.vercel.app/",
-    order: 2
+    order: 5
   },
   {
     title: "Car Rental Website",
@@ -48,7 +47,7 @@ const projects = [
     thumb: 3,
     github: "https://github.com/shirzajamil08-png/car-rental-website",
     demo: "https://car-rental-website-snowy.vercel.app/",
-    order: 3
+    order: 2
   },
   {
     title: "Toast & Brew: Coffee House",
@@ -60,7 +59,8 @@ const projects = [
     thumb: 4,
     github: "https://github.com/shirzajamil08-png/coffee-website",
     demo: "https://coffee-website-navy-five.vercel.app/",
-    order: 4
+    featured: true,
+    order: 1
   },
   {
     title: "This MERN Portfolio",
@@ -73,7 +73,7 @@ const projects = [
     emoji: "\u{1F3A8}",
     github: "https://github.com/shirzajamil08-png/personal-portfolio",
     demo: "https://personal-portfolio-theta-beige-99.vercel.app/",
-    order: 5
+    order: 3
   }
 ];
 
