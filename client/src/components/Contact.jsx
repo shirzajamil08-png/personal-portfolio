@@ -2,6 +2,8 @@ import { useState } from "react";
 import Reveal from "./Reveal";
 import { sendMessage } from "../api";
 import { profile } from "../data/portfolio";
+import { GithubIcon, LinkedinIcon, MailIcon, XIcon } from "./icons";
+import { PhoneIcon, PinIcon } from "./techIcons";
 
 const EMPTY = { name: "", email: "", subject: "", message: "" };
 
@@ -46,7 +48,7 @@ export default function Contact() {
     }
 
     setSending(true);
-    setStatus({ text: "Sending…", kind: "" });
+    setStatus({ text: "Sending", kind: "" });
 
     try {
       const res = await sendMessage(form);
@@ -54,12 +56,8 @@ export default function Contact() {
       setForm(EMPTY);
       setErrors({});
     } catch (err) {
-      // server-side validation errors come back keyed by field
       if (err.errors) setErrors(err.errors);
-      setStatus({
-        text: err.message || "Could not reach the server. Please try again.",
-        kind: "bad"
-      });
+      setStatus({ text: err.message || "Could not reach the server. Please try again.", kind: "bad" });
     } finally {
       setSending(false);
       setTimeout(() => setStatus({ text: "", kind: "" }), 7000);
@@ -70,81 +68,66 @@ export default function Contact() {
     <div className={`field ${errors[name] ? "has-error" : ""}`}>
       <label htmlFor={name}>{label}</label>
       {type === "textarea" ? (
-        <textarea
-          id={name}
-          name={name}
-          rows="5"
-          placeholder={placeholder}
-          value={form[name]}
-          onChange={onChange}
-          onBlur={onBlur}
-        />
+        <textarea id={name} name={name} rows="5" placeholder={placeholder} value={form[name]} onChange={onChange} onBlur={onBlur} />
       ) : (
-        <input
-          type={type}
-          id={name}
-          name={name}
-          placeholder={placeholder}
-          value={form[name]}
-          onChange={onChange}
-          onBlur={onBlur}
-        />
+        <input type={type} id={name} name={name} placeholder={placeholder} value={form[name]} onChange={onChange} onBlur={onBlur} />
       )}
       <small className="error">{errors[name] || ""}</small>
     </div>
   );
 
   return (
-    <section className="section section--alt" id="contact">
-      <div className="container">
-        <Reveal className="section__head" as="header">
-          <p className="section__eyebrow">06 / Contact</p>
-          <h2 className="section__title">
-            Let&rsquo;s <span className="gradient-text">Build</span> Something
-          </h2>
-          <p className="section__sub">Got a project, a role, or just a question? Drop me a message.</p>
+    <section className="band" id="contact">
+      <div className="wrap">
+        <Reveal className="head" as="header">
+          <p className="eyebrow">Contact</p>
+          <h2 className="h2">Let&rsquo;s build something</h2>
+          <p className="lead">Got a project, a role, or just a question? Drop me a message.</p>
         </Reveal>
 
         <div className="contact">
-          <Reveal className="contact__info">
-            <a className="info glass" href={`mailto:${profile.email}`}>
-              <span className="info__icon">✉️</span>
-              <span>
-                <strong>Email</strong>
-                {profile.email}
-              </span>
-            </a>
-            <a className="info glass" href={`tel:${profile.phone.replace(/\s/g, "")}`}>
-              <span className="info__icon">📞</span>
-              <span>
-                <strong>Phone</strong>
-                {profile.phone}
-              </span>
-            </a>
-            <div className="info glass">
-              <span className="info__icon">📍</span>
-              <span>
-                <strong>Location</strong>
-                {profile.location}
-              </span>
+          <Reveal>
+            <div className="contact__list">
+              <a className="contact__row" href={`mailto:${profile.email}`}>
+                <MailIcon className="contact__icon" />
+                <span>
+                  <strong>Email</strong>
+                  <em>{profile.email}</em>
+                </span>
+              </a>
+              <a className="contact__row" href={`tel:${profile.phone.replace(/\s/g, "")}`}>
+                <PhoneIcon className="contact__icon" />
+                <span>
+                  <strong>Phone</strong>
+                  <em>{profile.phone}</em>
+                </span>
+              </a>
+              <div className="contact__row">
+                <PinIcon className="contact__icon" />
+                <span>
+                  <strong>Location</strong>
+                  <em>{profile.location}</em>
+                </span>
+              </div>
             </div>
+
             <ul className="socials">
-              <li><a href={profile.socials.github} target="_blank" rel="noopener noreferrer">GH</a></li>
-              <li><a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer">IN</a></li>
-              <li><a href={profile.socials.twitter} target="_blank" rel="noopener noreferrer">X</a></li>
-              <li><a href={profile.socials.instagram} target="_blank" rel="noopener noreferrer">IG</a></li>
+              <li><a href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon /></a></li>
+              <li><a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a></li>
+              <li><a href={`mailto:${profile.email}`} aria-label="Email"><MailIcon /></a></li>
+              <li><a href={profile.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="X"><XIcon /></a></li>
             </ul>
           </Reveal>
 
-          <Reveal className="contact__form-wrap" delay={0.1}>
-            <form className="contact__form glass" onSubmit={onSubmit} noValidate>
-              {field("name", "Your Name", "Jane Doe")}
-              {field("email", "Email Address", "jane@example.com", "email")}
+          <Reveal delay={0.1}>
+            <form className="form" onSubmit={onSubmit} noValidate>
+              {field("name", "Your name", "Jane Doe")}
+              {field("email", "Email address", "jane@example.com", "email")}
               {field("subject", "Subject", "Project enquiry")}
-              {field("message", "Message", "Tell me about your idea…", "textarea")}
+              {field("message", "Message", "Tell me about your idea", "textarea")}
 
-              <button type="submit" className="btn btn--primary btn--block" disabled={sending}>
-                {sending ? "Sending…" : "Send Message"}
+              <button type="submit" className="btn btn--dark btn--block" disabled={sending}>
+                {sending ? "Sending" : "Send Message"}
               </button>
 
               <p className={`form-status ${status.kind}`} role="status" aria-live="polite">

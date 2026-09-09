@@ -15,5 +15,5 @@ export default function ScrollProgress() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  return <div className="scroll-bar" style={{ width: `${percent}%` }} aria-hidden="true" />;
+  return <div className="progress" style={{ width: `${percent}%` }} aria-hidden="true" />;
 }

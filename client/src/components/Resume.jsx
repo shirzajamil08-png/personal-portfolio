@@ -1,35 +1,31 @@
 import Reveal from "./Reveal";
-import TiltCard from "./TiltCard";
 import { profile } from "../data/portfolio";
 
 export default function Resume() {
   return (
-    <section className="section" id="resume">
-      <div className="container">
-        <Reveal className="resume glass">
-          <div className="resume__copy">
-            <p className="section__eyebrow">05 / Resume</p>
-            <h2 className="section__title">
-              Grab my <span className="gradient-text">CV</span>
-            </h2>
-            <p>
-              Full breakdown of my skills, education, projects and experience in a single page. View it in the
-              browser or download the PDF.
+    <section className="band band--panel" id="resume">
+      <div className="wrap">
+        <div className="cv">
+          <Reveal>
+            <p className="eyebrow">Resume</p>
+            <h2 className="h2">Everything on one page</h2>
+            <p className="lead">
+              My skills, education, internship and projects in a single PDF. Read it in the browser
+              or keep a copy.
             </p>
-            <div className="resume__actions">
+            <div className="cv__actions">
               <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="btn btn--ghost">
                 View Resume
               </a>
-              <a href={profile.resume} className="btn btn--primary" download>
+              <a href={profile.resume} className="btn btn--light" download>
                 Download PDF
               </a>
             </div>
-          </div>
+          </Reveal>
 
-          <TiltCard className="resume__sheet" max={12}>
-            {/* a real preview of the CV. Click it to open the PDF */}
+          <Reveal delay={0.1} className="cv__sheet-wrap">
             <a
-              className="sheet"
+              className="cv__sheet"
               href={profile.resume}
               target="_blank"
               rel="noopener noreferrer"
@@ -43,8 +39,8 @@ export default function Resume() {
                 height="1123"
               />
             </a>
-          </TiltCard>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

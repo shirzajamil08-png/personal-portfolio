@@ -22,7 +22,6 @@ export default defineConfig({
         // Three.js is by far the biggest dependency; keeping it in its own chunk
         // lets the page shell load and paint without waiting for the 3D scene.
         manualChunks: {
-          three: ["three"],
           react: ["react", "react-dom"],
           motion: ["framer-motion"]
         }
