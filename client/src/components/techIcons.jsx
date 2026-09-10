@@ -1,6 +1,26 @@
 /* Inline SVG marks for the technologies used on the site.
    Everything is drawn with currentColor so an icon takes the colour of
-   whatever it sits in. No icon font, no external requests. */
+   whatever it sits in. Real, full-colour brand logos (for anything
+   simple-icons ships) live in brandIcons.jsx instead. */
+import {
+  ReactBrand,
+  NodeBrand,
+  ExpressBrand,
+  MongoBrand,
+  MongooseBrand,
+  GitHubBrand,
+  Html5Brand,
+  BootstrapBrand,
+  JsBrand,
+  TailwindBrand,
+  ClaudeBrand,
+  PostmanBrand,
+  VercelBrand,
+  RenderBrand,
+  OpenAiBrand,
+  VscodeBrand,
+  Css3Badge
+} from "./brandIcons";
 
 const svg = (children, extra = {}) => (props) => (
   <svg
@@ -20,158 +40,60 @@ const svg = (children, extra = {}) => (props) => (
   </svg>
 );
 
-/* ---------- core stack ---------- */
+/* ---------- Stack group marks: one per category, not per tool ----------
+   Geometry taken from the Lucide icon set (ISC licensed) and inlined the
+   same way the brand logos are, so these are properly drawn rather than
+   traced by hand. Lucide is drawn for a 24 box at stroke-width 2. */
 
-export const ReactIcon = svg(
+/* app-window */
+export const FrontendIcon = svg(
   <>
-    <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none" />
-    <ellipse cx="12" cy="12" rx="10" ry="3.9" />
-    <ellipse cx="12" cy="12" rx="10" ry="3.9" transform="rotate(60 12 12)" />
-    <ellipse cx="12" cy="12" rx="10" ry="3.9" transform="rotate(120 12 12)" />
+    <rect x="2" y="4" width="20" height="16" rx="2" />
+    <path d="M10 4v4" />
+    <path d="M2 8h20" />
+    <path d="M6 4v4" />
   </>,
-  { strokeWidth: 1.1 }
+  { strokeWidth: 2 }
 );
 
-export const NodeIcon = svg(
+/* database */
+export const DatabaseIcon = svg(
   <>
-    <path d="M12 2.2 20.5 7v10L12 21.8 3.5 17V7z" />
-    <path d="M9.6 14.4c0 .9.8 1.5 2.2 1.5 1.4 0 2.3-.5 2.3-1.5 0-1-.7-1.3-2.2-1.5-1.6-.2-2.3-.5-2.3-1.5 0-.9.8-1.4 2.2-1.4 1.3 0 2.1.5 2.2 1.3" />
-  </>
+    <ellipse cx="12" cy="5" rx="9" ry="3" />
+    <path d="M3 5V19A9 3 0 0 0 21 19V5" />
+    <path d="M3 12A9 3 0 0 0 21 12" />
+  </>,
+  { strokeWidth: 2 }
 );
 
-export const MongoIcon = svg(
+/* sparkles */
+export const AiIcon = svg(
   <>
-    <path d="M12 2.5c2.9 3.9 4.6 7 4.6 9.9 0 3.4-2 5.9-4.6 6.9-2.6-1-4.6-3.5-4.6-6.9 0-2.9 1.7-6 4.6-9.9z" />
-    <path d="M12 6.5v11.5" strokeWidth="1.1" />
-    <path d="M11.8 19.4h.5l-.15 2.1h-.2z" fill="currentColor" />
-  </>
+    <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+    <path d="M20 2v4" />
+    <path d="M22 4h-4" />
+    <circle cx="4" cy="20" r="2" />
+  </>,
+  { strokeWidth: 2 }
 );
 
-export const ExpressIcon = svg(
+/* rocket */
+export const ToolsIcon = svg(
   <>
-    <rect x="2.2" y="4.2" width="19.6" height="15.6" rx="3.4" />
-    <text
-      x="12"
-      y="15.6"
-      textAnchor="middle"
-      fontSize="9"
-      fontWeight="700"
-      fontFamily="JetBrains Mono, monospace"
-      fill="currentColor"
-      stroke="none"
-    >
-      ex
-    </text>
-  </>
-);
-
-export const JsIcon = svg(
-  <>
-    <rect x="2.5" y="2.5" width="19" height="19" rx="3.2" />
-    <text
-      x="12"
-      y="16"
-      textAnchor="middle"
-      fontSize="9.5"
-      fontWeight="700"
-      fontFamily="JetBrains Mono, monospace"
-      fill="currentColor"
-      stroke="none"
-    >
-      JS
-    </text>
-  </>
-);
-
-export const CssIcon = svg(
-  <>
-    <path d="M4 2.6h16l-1.5 16.8L12 21.4l-6.5-2V2.6z" />
-    <path d="M8.2 7.2h7.6M8.6 11.2h6.8l-.4 4.2-3 .9-3-.9-.1-1.3" strokeWidth="1.2" />
-  </>
-);
-
-export const HtmlIcon = svg(
-  <>
-    <path d="M4 2.6h16l-1.5 16.8L12 21.4l-6.5-2V2.6z" />
-    <path d="M15.9 7.4H8.4l.3 3.4h6.9l-.4 4.4-3.2.9-3.2-.9-.15-1.6" strokeWidth="1.2" />
-  </>
-);
-
-export const BootstrapIcon = svg(
-  <>
-    <rect x="2.5" y="2.5" width="19" height="19" rx="4.4" />
-    <path d="M9.4 7.4h3.9c1.5 0 2.4.7 2.4 1.9 0 1-.6 1.7-1.6 1.8v.1c1.3.1 2 .8 2 2 0 1.4-1 2.2-2.7 2.2H9.4z" strokeWidth="1.3" />
-  </>
+    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+    <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+  </>,
+  { strokeWidth: 2 }
 );
 
 /* ---------- tooling ---------- */
-
-export const GitIcon = svg(
-  <>
-    <circle cx="6.5" cy="6" r="2.2" />
-    <circle cx="6.5" cy="18" r="2.2" />
-    <circle cx="17.5" cy="9.5" r="2.2" />
-    <path d="M6.5 8.2v7.6M8.6 7.3c3 1 5.6.7 7.2 1.1" />
-  </>
-);
-
-export const ViteIcon = svg(
-  <>
-    <path d="M2.6 4.6 12 21.4l9.4-16.8L12 7z" />
-    <path d="M12.9 6.2 9.6 12.6l2.7-.4-.9 4.9 3.3-6.6-2.7.4z" strokeWidth="1.2" />
-  </>
-);
-
-export const RouterIcon = svg(
-  <>
-    <circle cx="5.5" cy="5.8" r="2.3" />
-    <circle cx="18.5" cy="18.2" r="2.3" />
-    <path d="M5.5 8.1v4.4a3.5 3.5 0 0 0 3.5 3.5h6" />
-    <path d="M13.4 13.6 16.2 16l-2.8 2.4" />
-  </>
-);
 
 export const ApiIcon = svg(
   <>
     <path d="M9 4.5H7.6A2.1 2.1 0 0 0 5.5 6.6v3.1c0 1.2-1 2.3-2.3 2.3 1.3 0 2.3 1 2.3 2.3v3.1a2.1 2.1 0 0 0 2.1 2.1H9" />
     <path d="M15 4.5h1.4a2.1 2.1 0 0 1 2.1 2.1v3.1c0 1.2 1 2.3 2.3 2.3-1.3 0-2.3 1-2.3 2.3v3.1a2.1 2.1 0 0 1-2.1 2.1H15" />
-  </>
-);
-
-export const AxiosIcon = svg(
-  <>
-    <path d="M3.5 8.5h13.2M13.4 5.2l3.3 3.3-3.3 3.3" />
-    <path d="M20.5 15.5H7.3M10.6 12.2 7.3 15.5l3.3 3.3" />
-  </>
-);
-
-export const NodemonIcon = svg(
-  <>
-    <path d="M20.4 12a8.4 8.4 0 1 1-2.5-6" />
-    <path d="M20.6 3.6v4.6H16" />
-  </>
-);
-
-export const ResponsiveIcon = svg(
-  <>
-    <rect x="2.4" y="4.2" width="13" height="10" rx="1.7" />
-    <path d="M5.6 17.6h6" />
-    <rect x="17" y="9.4" width="4.6" height="10.4" rx="1.5" />
-  </>
-);
-
-export const VscodeIcon = svg(
-  <>
-    <path d="M17.6 2.8 8.4 12l9.2 9.2 3.4-1.6V4.4z" />
-    <path d="m3 8.8 3-1.6 5.2 4.8L6 16.8l-3-1.6z" strokeWidth="1.2" />
-  </>
-);
-
-export const AosIcon = svg(
-  <>
-    <path d="M12 20.5V4.2" />
-    <path d="m6.6 9.6 5.4-5.4 5.4 5.4" />
-    <path d="M4.5 21.4h15" strokeWidth="1.2" />
   </>
 );
 
@@ -190,6 +112,15 @@ export const PinIcon = svg(
   <>
     <path d="M20 10.4c0 5.6-8 12-8 12s-8-6.4-8-12a8 8 0 1 1 16 0z" />
     <circle cx="12" cy="10.2" r="2.8" />
+  </>
+);
+
+
+export const CertificateIcon = svg(
+  <>
+    <circle cx="12" cy="9" r="6.2" />
+    <path d="m9 14.4-1.6 6.4 4.6-2.6 4.6 2.6-1.6-6.4" />
+    <path d="M9.4 9.2 11 10.8l3.6-3.6" strokeWidth="1.3" />
   </>
 );
 
@@ -228,6 +159,26 @@ export const SchoolIcon = svg(
   </>
 );
 
+/* the emphasis mark off a block heading: three strokes converging at the
+   bottom-right of the box and fanning up and out to the left, so the box
+   can be hung on the heading's top-left corner */
+export const SparkIcon = svg(
+  <>
+    <path d="M19.7 16.8 15.5 8.9" />
+    <path d="M17.3 19 9.9 13.8" />
+    <path d="M16.1 22 7.2 20.8" />
+  </>,
+  { strokeWidth: 2.2 }
+);
+
+export const GlobeIcon = svg(
+  <>
+    <circle cx="12" cy="12" r="9.2" />
+    <path d="M2.9 12h18.2" />
+    <path d="M12 2.8c2.3 2.5 3.5 5.6 3.5 9.2s-1.2 6.7-3.5 9.2c-2.3-2.5-3.5-5.6-3.5-9.2s1.2-6.7 3.5-9.2z" />
+  </>
+);
+
 export const ArrowUpIcon = svg(
   <>
     <path d="M12 19.5V5" />
@@ -235,32 +186,37 @@ export const ArrowUpIcon = svg(
   </>
 );
 
-/* Look-up used by the skill tags. Anything missing falls back to CodeIcon. */
+/* Look-up used by the Stack tiles. Real logos everywhere except the
+   generic REST glyph, which isn't a brand. Anything missing falls back
+   to CodeIcon. */
 export const ICONS = {
-  "HTML5": HtmlIcon,
-  "CSS3": CssIcon,
-  "Bootstrap": BootstrapIcon,
-  "Responsive Design": ResponsiveIcon,
-  "React.js": ReactIcon,
-  "React Router": RouterIcon,
-  "Vite": ViteIcon,
-  "AOS": AosIcon,
-  "JavaScript": JsIcon,
-  "Node.js": NodeIcon,
-  "Express.js": ExpressIcon,
-  "MongoDB": MongoIcon,
-  "Mongoose": MongoIcon,
+  "HTML5": Html5Brand,
+  "CSS3": Css3Badge,
+  "JavaScript": JsBrand,
+  "Bootstrap": BootstrapBrand,
+  "Tailwind CSS": TailwindBrand,
+  "React.js": ReactBrand,
+  "Node.js": NodeBrand,
+  "Express.js": ExpressBrand,
+  "MongoDB": MongoBrand,
+  "Mongoose": MongooseBrand,
   "REST APIs": ApiIcon,
-  "Axios": AxiosIcon,
-  "Nodemon": NodemonIcon,
-  "Git & GitHub": GitIcon,
-  "VS Code": VscodeIcon,
+  "Git & GitHub": GitHubBrand,
+  "VS Code": VscodeBrand,
 
-  /* the skill bars spell some of these out differently */
-  "Responsive Web Design": ResponsiveIcon,
-  "Node.js & Express": NodeIcon,
-  "MongoDB & Mongoose": MongoIcon,
-  "JavaScript (ES6+)": JsIcon
+  "ChatGPT": OpenAiBrand,
+  "Claude": ClaudeBrand,
+  "Postman": PostmanBrand,
+  "Vercel": VercelBrand,
+  "Render": RenderBrand
 };
 
 export const iconFor = (name) => ICONS[name] || CodeIcon;
+
+/* a colour for the one tile still drawn by hand (real logos carry their
+   own official colour already, so they don't need this) */
+const TINTS = {
+  "REST APIs": "#0a0a0a"
+};
+
+export const tintFor = (name) => TINTS[name];

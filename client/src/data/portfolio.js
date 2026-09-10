@@ -53,18 +53,6 @@ export const aboutCards = [
   }
 ];
 
-export const skills = [
-  { name: "HTML5", level: 95 },
-  { name: "CSS3", level: 92 },
-  { name: "Bootstrap", level: 90 },
-  { name: "Responsive Web Design", level: 90 },
-  { name: "React.js", level: 88 },
-  { name: "Node.js & Express", level: 85 },
-  { name: "MongoDB & Mongoose", level: 82 },
-  { name: "JavaScript (ES6+)", level: 70 },
-  { name: "Git & GitHub", level: 70 }
-];
-
 export const capabilities = [
   "MERN Stack Development",
   "Frontend Development",
@@ -74,27 +62,53 @@ export const capabilities = [
   "Deployment & Hosting"
 ];
 
-/* grouped tools, rendered as cards in the Stack block */
+/* grouped tools, rendered as cards in the Stack block.
+   `span` is how many of the 12 grid columns the card takes on desktop
+   (pairs sum to 12 so rows line up: 7+5, then 4+8) — bigger groups get
+   more room, so the grid reads as tiles rather than uniform rows.
+   `tileMin` is the flex-basis (px) each tool tile starts from: it caps a
+   full row at roughly the count noted below, and — because the tiles are
+   flex items, not grid cells — lets a short last row's tiles grow to
+   fill the width instead of leaving empty space. */
 export const stackGroups = [
   {
     title: "Frontend",
-    mark: "react",
-    items: ["HTML5", "CSS3", "Bootstrap", "React.js", "React Router", "Vite"]
+    mark: "frontend",
+    span: 7,
+    tileMin: 65, // 5 per row
+    items: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind CSS", "React.js"]
   },
   {
-    title: "Backend",
-    mark: "node",
-    items: ["Node.js", "Express.js", "REST APIs", "Nodemon"]
+    title: "Backend & Database",
+    mark: "backend",
+    span: 5,
+    tileMin: 75, // 3 per row
+    items: ["Node.js", "Express.js", "REST APIs", "MongoDB", "Mongoose"]
   },
   {
-    title: "Database",
-    mark: "mongo",
-    items: ["MongoDB", "Mongoose"]
+    title: "AI & Productivity",
+    mark: "ai",
+    span: 4,
+    tileMin: 85, // 2 per row
+    items: ["ChatGPT", "Claude"]
   },
   {
-    title: "Tools",
-    mark: "git",
-    items: ["Git & GitHub", "VS Code", "Axios", "AOS"]
+    title: "Tools & Deploy",
+    mark: "tools",
+    span: 8,
+    tileMin: 78, // all 5 fit on one row — no lone tile left dangling on its own line
+    items: ["Git & GitHub", "VS Code", "Postman", "Vercel", "Render"]
+  }
+];
+
+/* Placeholder entry — swap in your real certificate (title, issuer, link)
+   once you have one to show. */
+export const certificates = [
+  {
+    title: "Add Your Certificate Name",
+    org: "Issuing Platform",
+    mark: "cert",
+    link: ""
   }
 ];
 
@@ -181,7 +195,7 @@ export const education = [
   {
     date: "2020 - 2022",
     title: "FSc Pre-Medical",
-    org: "College",
+    org: "Punjab Group of Colleges Faisalabad",
     text: "Intermediate in Pre-Medical, before moving into computer science."
   }
 ];
@@ -202,12 +216,19 @@ export const experience = [
   }
 ];
 
+/* Shown in the Languages card next to Education. Placeholder levels —
+   correct these to your own. */
+export const languages = [
+  { code: "Ur", name: "Urdu", level: "Native" },
+  { code: "En", name: "English", level: "Intermediate" }
+];
+
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
+  { id: "journey", label: "Journey" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "journey", label: "Journey" },
   { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" }
 ];
