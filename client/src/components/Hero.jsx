@@ -13,12 +13,14 @@ export default function Hero() {
         <div className="hero__copy">
           <Reveal>
             <p className="hero__status">
-              <span className="dot-live" /> Available for internships and freelance work
+              <span className="dot-live" /> Available for freelance work
             </p>
           </Reveal>
 
           <Reveal delay={0.05}>
-            <h1 className="display hero__title">Hi, I&rsquo;m {profile.name}</h1>
+            <h1 className="display hero__title">
+              Hi, I&rsquo;m {profile.name}<span className="accent">.</span>
+            </h1>
           </Reveal>
 
           <Reveal delay={0.1}>

@@ -88,7 +88,6 @@ export default function Skills() {
             </h3>
             <ul className="certs">
               {certificates.map((c) => {
-                const Mark = GROUP_MARKS[c.mark] || CertificateIcon;
                 const Tag = c.link ? "a" : "div";
                 return (
                   <li key={c.title}>
@@ -96,10 +95,12 @@ export default function Skills() {
                       className="cert"
                       {...(c.link ? { href: c.link, target: "_blank", rel: "noopener noreferrer" } : {})}
                     >
-                      <span className="cert__logo"><Mark /></span>
+                      <span className="cert__logo">
+                        {c.logo ? <img src={c.logo} alt="" /> : <CertificateIcon />}
+                      </span>
                       <span>
                         <strong className="cert__title">{c.title}</strong>
-                        <span className="cert__org">{c.org} · Certification</span>
+                        <span className="cert__org">{c.org} · {c.date}</span>
                       </span>
                     </Tag>
                   </li>

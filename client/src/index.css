@@ -31,12 +31,16 @@
 
 html {
   scroll-behavior: smooth;
-  /* the stuck nav's height at its shortest (63px on phones, 70px on desktop):
-     a section reached from a nav link then starts under the nav with nothing
-     of the section above showing; a taller nav only covers the section's
-     own empty top padding */
-  scroll-padding-top: 63px;
+  /* a section reached from a nav link lands this far from the top. It must not
+     exceed the stuck nav's height (57px with Hire Me, 64px with the menu
+     button), or a strip of the section above shows under the nav, which reads
+     as a black line under the dark Resume panel. Just under is safe: the nav
+     then only covers a sliver of the section's own empty top padding */
+  scroll-padding-top: 56px;
   -webkit-text-size-adjust: 100%;
+}
+@media (max-width: 820px) {
+  html { scroll-padding-top: 63px; }
 }
 
 body {
@@ -190,7 +194,8 @@ h1, h2, h3, h4 {
 .btn--light { background: #fff; color: var(--ink); border-color: var(--line); }
 .btn--light:hover { border-color: #bfbfc6; }
 
-.btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+/* --line is too faint to outline a button on the grey page, so this border is a step darker */
+.btn--ghost { background: transparent; color: var(--ink); border-color: #d4d4d8; }
 /* on any dark surface the outline button needs light text */
 .band--dark .btn--ghost,
 .band--panel .btn--ghost,
@@ -555,7 +560,8 @@ a.cert:hover {
   color: var(--accent);
   font-size: 1.4rem;
 }
-.cert__title { display: block; font-size: .93rem; font-weight: 500; color: var(--ink); }
+.cert__logo img { width: 28px; height: 28px; object-fit: contain; }
+.cert__title { display: block; font-size: .93rem; font-weight: 700; color: var(--ink); }
 .cert__org { display: block; font-size: .78rem; font-weight: 300; color: var(--muted); margin-top: .2rem; }
 
 @media (max-width: 860px) {

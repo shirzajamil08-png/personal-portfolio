@@ -92,11 +92,14 @@ export const stackGroups = [
 
 /* Placeholder entry — swap in your real certificate (title, issuer, link)
    once you have one to show. */
+/* `link` is the certificate's URL (a credential page or a PDF in /assets);
+   with a link the card becomes clickable, without one it is plain. */
 export const certificates = [
   {
-    title: "Add Your Certificate Name",
-    org: "Issuing Platform",
-    mark: "cert",
+    title: "Web Development Internship",
+    org: "SQROCK IT",
+    date: "2026",
+    logo: "/assets/sqrock.png",
     link: ""
   }
 ];
@@ -216,8 +219,8 @@ export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
-  { id: "projects", label: "Projects" },
   { id: "journey", label: "Journey" },
+  { id: "projects", label: "Projects" },
   { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" }
 ];
