@@ -153,9 +153,8 @@ pointer and to scroll.
 
 1. **Your details** — everything lives in `client/src/data/portfolio.js`: name, role,
    email, phone, location, social links, skills, timeline entries.
-2. **Profile photo** — in `client/src/components/Hero.jsx`, swap the inline `<svg>` for
-   `<img src="/assets/profile.jpg" alt="Your Name" />` and drop the file into
-   `client/public/assets/`.
+2. **Hero portrait** — replace `client/public/assets/hero-portrait.webp` with your own
+   portrait on a transparent background (it is shown by `client/src/components/Hero.jsx`).
 3. **Projects** — edit `server/seed.js` and re-run `npm run seed --prefix server -- --force`,
    or POST to `/api/projects` with your admin key. Keep
    `client/src/data/portfolio.js` in sync so the offline fallback matches.

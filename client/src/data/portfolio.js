@@ -3,7 +3,6 @@
 
 export const profile = {
   name: "Shirza Jamil",
-  initials: "SJ",
   role: "MERN Stack Developer",
   email: "shirzajamil08@gmail.com",
   phone: "+92 000 0000000",
@@ -22,12 +21,6 @@ export const roles = [
   "React.js Developer",
   "Node & Express Backend Dev",
   "Responsive Web Designer"
-];
-
-export const stats = [
-  { value: 5, label: "Projects deployed" },
-  { value: 18, label: "Technologies" },
-  { value: 2, label: "Years in web dev" }
 ];
 
 export const aboutCards = [

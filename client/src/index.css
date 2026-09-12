@@ -86,7 +86,6 @@ h1, h2, h3, h4 {
 /* headings default to ink, so every dark surface has to opt back into white */
 .band--dark h1, .band--dark h2, .band--dark h3, .band--dark h4,
 .band--panel h1, .band--panel h2, .band--panel h3, .band--panel h4,
-.hero__panel h1, .hero__panel h2,
 .footer h1, .footer h2, .footer h3, .footer h4 { color: #fff; }
 
 /* the black bands are inset and rounded, like panels on the page */
@@ -195,7 +194,6 @@ h1, h2, h3, h4 {
 /* on any dark surface the outline button needs light text */
 .band--dark .btn--ghost,
 .band--panel .btn--ghost,
-.hero__panel .btn--ghost,
 .footer .btn--ghost { color: #fff; border-color: var(--line-dark); }
 .btn--ghost:hover { border-color: var(--accent); }
 
@@ -275,79 +273,33 @@ h1, h2, h3, h4 {
 .nav__toggle.is-open span:nth-child(3) { transform: rotate(-45deg); }
 
 /* ---------------------------------------------------------
-   Hero
+   Hero: copy on the left, the grayscale portrait on the
+   right, standing on the bottom edge of the section
    --------------------------------------------------------- */
-.hero { padding: 5.5rem clamp(.5rem, 1.5vw, 1rem) 0; }
+.hero { padding-top: 5.5rem; } /* clears the fixed nav */
 
-.hero__panel {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--r-lg);
-  background: radial-gradient(120% 100% at 50% 0%, #24242b 0%, #0a0a0a 62%);
-  color: #fff;
-  text-align: center;
-  padding: clamp(3rem, 7vw, 5.5rem) var(--gutter) clamp(2.75rem, 6vw, 4.5rem);
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: end;
+  gap: clamp(2rem, 5vw, 4.5rem);
   min-height: min(84vh, 760px);
-  display: grid;
-  align-content: center;
-  justify-items: center;
 }
 
-/* soft accent wash so the panel is not flat black */
-.hero__panel::after {
-  content: "";
-  position: absolute;
-  inset: auto -20% -55% -20%;
-  height: 70%;
-  background: radial-gradient(50% 100% at 50% 100%, color-mix(in srgb, var(--accent) 26%, transparent), transparent 70%);
-  pointer-events: none;
-}
-.hero__panel > * { position: relative; z-index: 1; }
-
-.hero__avatar {
-  width: clamp(104px, 12vw, 138px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 1.6rem;
-  border: 2px solid rgba(255, 255, 255, .22);
-  background: #17171c;
-  display: grid;
-  place-items: center;
-}
-.hero__avatar img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  /* profile.jpg is already cropped inside the #OPENTOWORK ring, so this only
-     needs a hair of scale to guarantee no gap at the circle's edge */
-  transform: scale(1.02);
-}
-.hero__avatar-fallback {
-  font-size: 2rem; font-weight: 500; color: #fff; letter-spacing: -0.03em;
-}
-
-.hero__title { color: #fff; margin-bottom: 1.1rem; }
-.hero__role {
-  font-family: "JetBrains Mono", monospace;
-  font-size: clamp(.9rem, 1.5vw, 1.05rem);
-  color: rgba(255, 255, 255, .78);
-  margin-bottom: 1.1rem;
-  min-height: 1.6em;
-}
-.caret { color: var(--accent); }
-
-.hero__lead { color: rgba(255, 255, 255, .7); margin: 0 auto 2rem; }
-.hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+/* the copy is centred against the portrait; the portrait stands on the floor */
+.hero__copy { align-self: center; padding-block: clamp(2rem, 5vw, 4rem); }
 
 .hero__status {
-  display: inline-flex; align-items: center; gap: .5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0 0 1.6rem;
   padding: .4rem .9rem;
-  margin-bottom: 1.6rem;
-  border: 1px solid rgba(255, 255, 255, .18);
+  border: 1px solid var(--line);
   border-radius: 999px;
+  background: var(--paper);
   font-size: .8rem;
-  color: rgba(255, 255, 255, .78);
+  color: var(--muted);
 }
 .dot-live {
   width: 7px; height: 7px; border-radius: 50%;
@@ -360,23 +312,44 @@ h1, h2, h3, h4 {
   100% { box-shadow: 0 0 0 0 rgba(61, 220, 132, 0); }
 }
 
-/* stat strip under the hero */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: clamp(2rem, 4vw, 3rem) 0 0;
-}
-.stats li { text-align: center; }
-.stats strong {
-  display: block;
-  font-size: clamp(2rem, 3.6vw, 2.9rem);
-  font-weight: 500;
+/* sized to fit on one line in a half-width column */
+.hero__title { margin-bottom: 1.1rem; font-size: clamp(2.4rem, 4.6vw, 3.6rem); }
+
+.hero__role {
+  min-height: 1.6em; /* holds the line's height while the text is empty */
+  margin-bottom: 1.1rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(.9rem, 1.5vw, 1.05rem);
   color: var(--ink);
-  letter-spacing: -0.03em;
-  line-height: 1.1;
 }
-.stats span { font-size: .84rem; color: var(--muted); }
+.caret { color: var(--accent); }
+
+.hero__lead { margin-bottom: 2rem; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+.hero__media { justify-self: center; width: min(100%, 520px); }
+/* the photo's frame cuts straight through her shoulders. An oval fade rather
+   than straight bands rounds the lower body off like a portrait bust, so no
+   cut line survives; the oval is sized so the whole head stays fully opaque.
+   The middle stops ease the fade in and out (a smoothstep curve), so its start
+   doesn't show as a visible edge */
+.hero__media img {
+  --fade: radial-gradient(ellipse 56% 60% at 50% 40%,
+    #000 55%, rgba(0, 0, 0, .84) 66%, rgba(0, 0, 0, .5) 78%, rgba(0, 0, 0, .16) 89%, transparent 100%);
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: var(--fade);
+  mask-image: var(--fade);
+}
+
+/* phones: one column, copy centred above the portrait */
+@media (max-width: 860px) {
+  .hero__inner { grid-template-columns: 1fr; min-height: 0; text-align: center; }
+  .hero__copy { padding-block: 1.5rem 0; }
+  .hero__lead { margin-inline: auto; }
+  .hero__cta { justify-content: center; }
+  .hero__media { width: min(100%, 340px); }
+}
 
 /* ---------------------------------------------------------
    About
@@ -943,8 +916,6 @@ a.contact__row:hover { padding-left: .5rem; }
 @media (max-width: 640px) {
   .pillars { grid-template-columns: 1fr; }
   .footer__inner { grid-template-columns: 1fr; }
-  .stats { gap: .5rem; }
-  .hero__panel { min-height: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
