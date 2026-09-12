@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 import { sendMessage } from "../api";
 import { profile } from "../data/portfolio";
 import { GithubIcon, LinkedinIcon, MailIcon, XIcon } from "./icons";
-import { PhoneIcon, PinIcon } from "./techIcons";
+import { EnvelopeIcon, PhoneIcon, PinIcon } from "./techIcons";
 
 const EMPTY = { name: "", email: "", subject: "", message: "" };
 
@@ -89,7 +89,7 @@ export default function Contact() {
           <Reveal>
             <div className="contact__list">
               <a className="contact__row" href={`mailto:${profile.email}`}>
-                <MailIcon className="contact__icon" />
+                <EnvelopeIcon className="contact__icon" />
                 <span>
                   <strong>Email</strong>
                   <em>{profile.email}</em>
