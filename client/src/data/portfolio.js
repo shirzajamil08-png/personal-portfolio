@@ -9,10 +9,8 @@ export const profile = {
   location: "Pakistan · Remote friendly",
   resume: "/assets/resume.pdf",
   socials: {
-    github: "https://github.com/shirza",
-    linkedin: "https://linkedin.com/in/shirza",
-    twitter: "https://twitter.com/shirza",
-    instagram: "https://instagram.com/shirza"
+    github: "https://github.com/shirzajamil08-png",
+    linkedin: "https://www.linkedin.com/in/shirza0808/"
   }
 };
 

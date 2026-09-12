@@ -2,7 +2,7 @@ import { useState } from "react";
 import Reveal from "./Reveal";
 import { sendMessage } from "../api";
 import { profile } from "../data/portfolio";
-import { GithubIcon, LinkedinIcon, MailIcon, XIcon } from "./icons";
+import { GithubIcon, LinkedinIcon, MailIcon } from "./icons";
 import { EnvelopeIcon, PhoneIcon, PinIcon } from "./techIcons";
 
 const EMPTY = { name: "", email: "", subject: "", message: "" };
@@ -115,7 +115,6 @@ export default function Contact() {
               <li><a href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon /></a></li>
               <li><a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a></li>
               <li><a href={`mailto:${profile.email}`} aria-label="Email"><MailIcon /></a></li>
-              <li><a href={profile.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="X"><XIcon /></a></li>
             </ul>
           </Reveal>
 

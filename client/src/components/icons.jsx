@@ -19,12 +19,6 @@ export const MailIcon = () => (
   </svg>
 );
 
-export const XIcon = () => (
-  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-    <path d="M18.9 2H22l-7.3 8.3L23.3 22h-6.8l-5.3-6.9L5.1 22H2l7.8-8.9L1.7 2h6.9l4.8 6.4zm-1.1 18h1.7L7.3 3.8H5.5z" />
-  </svg>
-);
-
 export const DownloadIcon = () => (
   <svg
     viewBox="0 0 24 24"

@@ -1,6 +1,6 @@
 import { navLinks, profile } from "../data/portfolio";
 import Logo from "./Logo";
-import { GithubIcon, LinkedinIcon, MailIcon, XIcon } from "./icons";
+import { GithubIcon, LinkedinIcon, MailIcon } from "./icons";
 
 export default function Footer() {
   return (
@@ -36,7 +36,6 @@ export default function Footer() {
             <li><a href={profile.socials.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub"><GithubIcon /></a></li>
             <li><a href={profile.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><LinkedinIcon /></a></li>
             <li><a href={`mailto:${profile.email}`} aria-label="Email"><MailIcon /></a></li>
-            <li><a href={profile.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="X"><XIcon /></a></li>
           </ul>
         </div>
       </div>
