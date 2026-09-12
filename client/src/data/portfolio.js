@@ -32,22 +32,18 @@ export const stats = [
 
 export const aboutCards = [
   {
-    icon: "\u{1F3AF}",
     title: "Career Goal",
     text: "Grow into a full-stack engineer shipping production apps, and bring my AI studies into the products I build."
   },
   {
-    icon: "\u{1F393}",
     title: "Education",
     text: "BS Computer Science from GC University Faisalabad, now studying MS Artificial Intelligence at FAST Islamabad."
   },
   {
-    icon: "\u{1F4A1}",
     title: "Interests",
     text: "Full-stack architecture, REST APIs, responsive layouts, and clean component-driven React front ends."
   },
   {
-    icon: "\u{26A1}",
     title: "Strengths",
     text: "Problem solving, clean readable code, fast learning, and communicating clearly in a team."
   }
@@ -226,9 +222,9 @@ export const languages = [
 export const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "journey", label: "Journey" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
+  { id: "journey", label: "Journey" },
   { id: "resume", label: "Resume" },
   { id: "contact", label: "Contact" }
 ];

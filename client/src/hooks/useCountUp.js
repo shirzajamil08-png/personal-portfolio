@@ -7,20 +7,24 @@ export default function useCountUp(target, active, duration = 1400) {
 
   useEffect(() => {
     if (!active || done.current) return;
-    done.current = true;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setValue(target);
+      done.current = true;
       return;
     }
 
     const start = performance.now();
     let frame;
 
+    /* `done` is only set once the count actually finishes. Setting it up
+       front meant a cancelled run (a remount, or a hot reload in dev) left
+       the number frozen partway, often at 0, and refused to restart. */
     const step = (now) => {
       const p = Math.min((now - start) / duration, 1);
       setValue(Math.round(target * (1 - Math.pow(1 - p, 3))));
       if (p < 1) frame = requestAnimationFrame(step);
+      else done.current = true;
     };
 
     frame = requestAnimationFrame(step);

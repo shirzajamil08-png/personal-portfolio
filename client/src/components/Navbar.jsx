@@ -22,22 +22,26 @@ export default function Navbar() {
     };
   }, [open]);
 
-  /* scroll spy */
+  /* scroll spy: the active link is the last section (navLinks are in page
+     order) whose top has passed a line a third of the way down the screen.
+     Sections are looked up on every scroll rather than once on mount, so a
+     re-rendered section can't leave the spy watching a node that's gone. */
   useEffect(() => {
-    const sections = navLinks.map((l) => document.getElementById(l.id)).filter(Boolean);
-    if (!sections.length) return;
-
-    const spy = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-
-    sections.forEach((s) => spy.observe(s));
-    return () => spy.disconnect();
+    const onScroll = () => {
+      const line = window.innerHeight / 3;
+      let current = navLinks[0].id;
+      for (const { id } of navLinks) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= line) current = id;
+      }
+      /* the last section can be too short to ever reach the line */
+      const atBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      setActive(atBottom ? navLinks[navLinks.length - 1].id : current);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
